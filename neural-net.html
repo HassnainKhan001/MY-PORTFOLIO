@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Architecture | Muhammad Hasnain</title>
+  <meta name="description"
+    content="Explore Muhammad Hasnain's technical architecture stack including Software Architecture, Business Automation, and Neural Chatbot systems." />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="tech-grid-bg" style="background-color:#131318;">
+
+  <div class="scanline"></div>
+
+  <!-- Mesh Gradient -->
+  <div class="fixed-mesh" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-dot"></div>
+        <div class="nav-logo-text">MH.<span>SYS</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html"><span class="nav-num">01</span>Core Systems</a></li>
+        <li><a href="projects.html"><span class="nav-num">02</span>Architecture</a></li>
+        <li><a href="diagnostic.html"><span class="nav-num">03</span>Interface</a></li>
+        <li><a href="contact.html"><span class="nav-num">04</span>Uplink</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <a href="contact.html" class="btn-initiate">INITIATE_CONTACT</a>
+        <div style="display:flex;gap:0.5rem;">
+          <button class="icon-btn" title="Terminal"><span class="material-symbols-outlined"
+              style="font-variation-settings:'FILL' 0;">terminal</span></button>
+          <button class="icon-btn" title="Settings"><span
+              class="material-symbols-outlined">settings_input_component</span></button>
+          <button class="icon-btn" title="Monitoring"><span class="material-symbols-outlined">monitoring</span></button>
+        </div>
+      </div>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')"
+        aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">01 — Core Systems</a>
+      <a href="projects.html">02 — Architecture</a>
+      <a href="diagnostic.html">03 — Interface</a>
+      <a href="contact.html">04 — Uplink</a>
+    </div>
+  </nav>
+
+  <main class="arch-main">
+    <!-- Page Header -->
+    <header class="arch-header animate-fade-up">
+      <div class="arch-header-accent"></div>
+      <h1 class="arch-title">TECHNICAL ARCHITECTURE</h1>
+      <p class="arch-subtitle">// System Topography &amp; Intelligence Stack</p>
+    </header>
+
+    <!-- ── BENTO GRID ── -->
+    <div class="bento-grid">
+
+      <!-- Card 1: Software Architecture (Span 8) -->
+      <div class="bento-card bento-8 glass-panel glow-hover animate-fade-up stagger-1">
+        <div class="bento-status">
+          <div class="status-dot-sm"></div>
+          <span class="status-text">ONLINE</span>
+        </div>
+        <div class="bento-head">
+          <div class="bento-icon">
+            <span class="material-symbols-outlined"
+              style="font-size:2rem;color:var(--primary-fixed-dim);">account_tree</span>
+          </div>
+          <div>
+            <h2 class="bento-title">Software Architecture</h2>
+            <p class="bento-tier">Core Infrastructure Tier</p>
+          </div>
+        </div>
+        <div class="skill-bars">
+          <div class="skill-row">
+            <span class="skill-name">Distributed Systems</span>
+            <div class="skill-bar">
+              <div class="skill-fill"
+                style="width:100%;background:var(--primary-fixed-dim);box-shadow:0 0 10px rgba(0,220,229,0.8);"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Microservices</span>
+            <div class="skill-bar">
+              <div class="skill-fill skill-segmented" style="background:var(--primary-fixed-dim);"></div>
+              <div class="skill-fill skill-segmented" style="background:var(--primary-fixed-dim);"></div>
+              <div class="skill-fill skill-segmented" style="background:var(--primary-fixed-dim);"></div>
+              <div class="skill-fill skill-segmented" style="background:var(--primary-fixed-dim);"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">High-Fidelity UIs</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:91.6%;background:#d1bcff;box-shadow:0 0 10px rgba(209,188,255,0.8);">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Business Automation (Span 4) -->
+      <div class="bento-card bento-4 glass-panel glow-hover animate-fade-up stagger-2">
+        <div class="bento-status">
+          <div class="status-dot-sm" style="background:#e9c400;animation-name:pulse-yellow;"></div>
+          <span class="status-text" style="color:#e9c400;">OPTIMIZED</span>
+        </div>
+        <div class="bento-head">
+          <div class="bento-icon">
+            <span class="material-symbols-outlined" style="font-size:2rem;color:#d1bcff;">sync_alt</span>
+          </div>
+          <div>
+            <h2 class="bento-title">Business Auto</h2>
+            <p class="bento-tier">Process Tier</p>
+          </div>
+        </div>
+        <ul class="bento-list">
+          <li><span class="material-symbols-outlined"
+              style="font-size:16px;color:var(--primary-fixed-dim);">check_small</span>API Orchestration</li>
+          <li><span class="material-symbols-outlined"
+              style="font-size:16px;color:var(--primary-fixed-dim);">check_small</span>Workflow Mapping</li>
+          <li><span class="material-symbols-outlined"
+              style="font-size:16px;color:var(--primary-fixed-dim);">check_small</span>Process Optimization</li>
+        </ul>
+        <div class="bento-metric">
+          <span class="metric-label">THROUGHPUT</span>
+          <span class="metric-val">99.9%</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Neural Chatbot (Full Width) -->
+      <div class="bento-card bento-12 glass-panel glow-hover animate-fade-up stagger-3">
+        <div class="bento-status">
+          <div class="status-dot-sm"></div>
+          <span class="status-text">ACTIVE</span>
+        </div>
+        <div class="bento-full-body">
+          <!-- Left Info -->
+          <div class="bento-full-left">
+            <div class="bento-head">
+              <div class="bento-icon">
+                <span class="material-symbols-outlined"
+                  style="font-size:2rem;color:var(--primary-fixed-dim);">smart_toy</span>
+              </div>
+              <div>
+                <h2 class="bento-title">Neural Chatbot</h2>
+                <p class="bento-tier">Intelligence Tier</p>
+              </div>
+            </div>
+            <p class="bento-desc">Advanced conversational agents powered by bespoke large language models, grounded in
+              dense vector representations for precise retrieval-augmented generation.</p>
+            <div class="bento-items">
+              <div class="bento-item">
+                <span>LLM Fine-Tuning</span>
+                <span class="material-symbols-outlined"
+                  style="font-size:18px;color:var(--primary-fixed-dim);">data_object</span>
+              </div>
+              <div class="bento-item">
+                <span>Vector DB Integration</span>
+                <span class="material-symbols-outlined"
+                  style="font-size:18px;color:var(--primary-fixed-dim);">database</span>
+              </div>
+              <div class="bento-item">
+                <span>RAG Architectures</span>
+                <span class="material-symbols-outlined"
+                  style="font-size:18px;color:var(--primary-fixed-dim);">hub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Architecture Diagram -->
+          <div class="arch-diagram-wrap">
+            <div class="arch-diagram-grid" aria-hidden="true"></div>
+            <div class="arch-diagram">
+              <!-- Top Node -->
+              <div class="arch-node arch-node-top">
+                <span class="arch-node-label" style="color:var(--primary-fixed-dim);">USER_INTENT</span>
+                <span class="arch-node-sub">INBOUND_QUERY_STREAM</span>
+                <div class="arch-line-down"
+                  style="background:linear-gradient(to bottom, var(--primary-fixed-dim), transparent);"></div>
+              </div>
+
+              <!-- Middle Nodes -->
+              <div class="arch-mid-row">
+                <div class="arch-connector-h"></div>
+                <div class="arch-node arch-node-mid" style="border-color:rgba(209,188,255,0.5);">
+                  <div class="arch-line-up"
+                    style="background:linear-gradient(to top, transparent, rgba(0,220,229,0.5));"></div>
+                  <span class="arch-node-label" style="color:#d1bcff;">VECTOR_DB</span>
+                  <span class="arch-node-sub">SIMILARITY_SEARCH</span>
+                  <div class="arch-line-down"
+                    style="background:linear-gradient(to bottom, rgba(209,188,255,0.5), transparent);"></div>
+                </div>
+                <div class="arch-node arch-node-mid"
+                  style="border-color:rgba(233,196,0,0.5);box-shadow:0 0 10px rgba(233,196,0,0.1);">
+                  <div class="arch-line-up"
+                    style="background:linear-gradient(to top, transparent, rgba(0,220,229,0.5));"></div>
+                  <span class="arch-node-label" style="color:#e9c400;">LLM_CORE</span>
+                  <span class="arch-node-sub">FINE_TUNED_MODEL</span>
+                  <div class="arch-line-down"
+                    style="background:linear-gradient(to bottom, rgba(233,196,0,0.5), transparent);"></div>
+                </div>
+                <div class="arch-node arch-node-mid" style="border-color:rgba(0,220,229,0.5);">
+                  <div class="arch-line-up"
+                    style="background:linear-gradient(to top, transparent, rgba(0,220,229,0.5));"></div>
+                  <span class="arch-node-label" style="color:var(--primary-fixed-dim);">RAG_ENGINE</span>
+                  <span class="arch-node-sub">CONTEXT_INJECTION</span>
+                  <div class="arch-line-down"
+                    style="background:linear-gradient(to bottom, rgba(0,220,229,0.5), transparent);"></div>
+                </div>
+              </div>
+
+              <!-- Bottom Node -->
+              <div class="arch-connector-h-bottom"></div>
+              <div class="arch-node arch-node-bottom"
+                style="border-color:rgba(0,245,255,0.8);box-shadow:0 0 20px rgba(0,245,255,0.3);">
+                <span class="arch-node-label"
+                  style="color:var(--primary-fixed);font-size:13px;">SYNTHESIZED_RESPONSE</span>
+                <span class="arch-node-sub">OUTPUT_GENERATION</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer"
+    style="background:var(--surface-lowest, #0e0e13);border-top:1px solid rgba(58,73,74,0.2);">
+    <div class="footer-inner">
+      <div style="font-family:var(--font-mono);font-size:12px;color:var(--primary-fixed-dim);">© 2024 MH_CORE_SYSTEMS //
+        ALL RIGHTS RESERVED</div>
+      <div style="display:flex;gap:1.5rem;font-family:var(--font-mono);font-size:11px;color:var(--outline);">
+        <span>STATUS_OK</span>
+        <span>VER_2.4.0</span>
+        <span style="display:flex;align-items:center;gap:4px;">
+          <span class="material-symbols-outlined" style="font-size:14px;">lock</span>SECURITY_ENCRYPTED
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .fixed-mesh {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at top right, rgba(0, 245, 255, 0.12), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(104, 0, 236, 0.12), transparent 40%);
+    }
+
+    .btn-initiate {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary-fixed-dim);
+      color: #131318;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-initiate:hover {
+      box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+      transform: scale(1.03);
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      color: var(--primary-fixed-dim);
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .icon-btn:hover {
+      color: var(--primary-fixed);
+    }
+
+    .arch-main {
+      position: relative;
+      z-index: 10;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 7rem 2rem 4rem;
+    }
+
+    .arch-header {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+      border-left: 4px solid var(--primary-fixed-dim);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .arch-title {
+      font-family: var(--font-headline);
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--on-surface);
+      letter-spacing: -0.01em;
+    }
+
+    .arch-subtitle {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--primary-fixed-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-top: 0.25rem;
+    }
+
+    /* Bento Grid */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+
+    .bento-8 {
+      grid-column: span 12;
+    }
+
+    .bento-4 {
+      grid-column: span 12;
+    }
+
+    .bento-12 {
+      grid-column: span 12;
+    }
+
+    @media (min-width: 768px) {
+      .bento-8 {
+        grid-column: span 8;
+      }
+
+      .bento-4 {
+        grid-column: span 4;
+      }
+    }
+
+    .bento-card {
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .glow-hover:hover {
+      box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+      border-color: rgba(0, 220, 229, 0.6);
+    }
+
+    .bento-status {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .status-text {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--primary-fixed-dim);
+    }
+
+    @keyframes pulse-yellow {
+      0% {
+        box-shadow: 0 0 0 0 rgba(233, 196, 0, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 6px rgba(233, 196, 0, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(233, 196, 0, 0);
+      }
+    }
+
+    .bento-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .bento-icon {
+      padding: 0.5rem;
+      background: var(--surface-container);
+      border: 1px solid rgba(58, 73, 74, 0.3);
+      border-radius: 0.375rem;
+    }
+
+    .bento-title {
+      font-family: var(--font-headline);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--on-surface);
+      margin-bottom: 0.25rem;
+    }
+
+    .bento-tier {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--outline);
+    }
+
+    /* Skill Bars */
+    .skill-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .skill-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(58, 73, 74, 0.2);
+      padding-bottom: 0.5rem;
+      gap: 1rem;
+    }
+
+    .skill-name {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--on-surface-variant);
+      white-space: nowrap;
+    }
+
+    .skill-bar {
+      height: 4px;
+      width: 128px;
+      background: var(--surface-container);
+      border-radius: 2px;
+      overflow: hidden;
+      display: flex;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+
+    .skill-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.8s ease;
+    }
+
+    .skill-segmented {
+      width: calc(25% - 1.5px);
+    }
+
+    /* Business Automation list */
+    .bento-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--on-surface-variant);
+    }
+
+    .bento-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .bento-metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(58, 73, 74, 0.2);
+      font-family: var(--font-mono);
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: var(--outline);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .metric-val {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--on-surface);
+    }
+
+    /* Neural Chatbot full card */
+    .bento-full-body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .bento-full-left {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .bento-desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--on-surface-variant);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .bento-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .bento-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface-high);
+      border: 1px solid rgba(58, 73, 74, 0.3);
+      padding: 0.5rem 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--on-surface);
+      border-radius: 2px;
+    }
+
+    /* Architecture Diagram */
+    .arch-diagram-wrap {
+      flex: 2;
+      min-width: 280px;
+      background: rgba(14, 14, 19, 0.6);
+      border: 1px solid rgba(58, 73, 74, 0.2);
+      border-radius: 0.5rem;
+      min-height: 280px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .arch-diagram-grid {
+      position: absolute;
+      inset: 0;
+      opacity: 0.3;
+      background-image: linear-gradient(rgba(0, 220, 229, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 220, 229, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .arch-diagram {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      width: 100%;
+      padding: 1.5rem 2rem;
+    }
+
+    .arch-node {
+      background: rgba(19, 19, 24, 0.9);
+      border: 1px solid rgba(0, 220, 229, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-align: center;
+      position: relative;
+      backdrop-filter: blur(8px);
+    }
+
+    .arch-node-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .arch-node-sub {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--outline);
+      margin-top: 2px;
+    }
+
+    .arch-node-top {
+      margin-bottom: 0;
+    }
+
+    .arch-node-bottom {
+      margin-top: 0;
+      box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+    }
+
+    .arch-line-down,
+    .arch-line-up {
+      position: absolute;
+      width: 1px;
+      height: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .arch-line-down {
+      bottom: -24px;
+    }
+
+    .arch-line-up {
+      top: -24px;
+    }
+
+    .arch-mid-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin: 0;
+      position: relative;
+      padding: 1.5rem 0;
+    }
+
+    .arch-node-mid {
+      flex: 1;
+      min-width: 100px;
+    }
+
+    .arch-connector-h {
+      position: absolute;
+      height: 1px;
+      width: 75%;
+      background: linear-gradient(to right, transparent, rgba(0, 220, 229, 0.4), transparent);
+      top: 0;
+      left: 12.5%;
+    }
+
+    .arch-connector-h-bottom {
+      width: 75%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(0, 220, 229, 0.4), transparent);
+      margin-bottom: 0;
+    }
+  </style>
+
+  <script>
+    const animatedEls = document.querySelectorAll('.animate-fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    animatedEls.forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  </script>
+</body>
+
+</html>
