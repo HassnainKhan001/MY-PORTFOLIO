@@ -64,8 +64,8 @@
   <!-- Main Content -->
   <main class="contact-main" style="flex:1;">
     <header class="contact-header animate-fade-up">
-      <h1 class="contact-title text-glow-cyan">ESTABLISH NEURAL UPLINK</h1>
-      <p class="contact-subtitle">System Ready // Awaiting Input</p>
+      <h1 class="contact-title animate-fade-up">LET'S BUILD<br><span class="text-glow-cyan">SOMETHING SMART</span></h1>
+      <p class="contact-subtitle animate-fade-up stagger-1">Have a project in mind? Reach out and let's discuss how I can help you grow.</p>
     </header>
 
     <div class="contact-grid">
@@ -159,35 +159,36 @@
           <!-- Name -->
           <div class="form-group">
             <label class="form-label" for="commander_name">
-              <span class="material-symbols-outlined" style="font-size:14px;">terminal</span>
-              Your_Name
+              <span class="material-symbols-outlined" style="font-size:14px;">person</span>
+              Full Name
             </label>
             <input class="form-input" type="text" id="commander_name" name="commander_name"
-              placeholder="ENTER IDENTIFICATION" required />
+              placeholder="Enter your name..." required />
           </div>
 
           <!-- Email -->
           <div class="form-group">
             <label class="form-label" for="return_email">
               <span class="material-symbols-outlined" style="font-size:14px;">alternate_email</span>
-              RETURN_UPLINK_EMAIL
+              Email Address
             </label>
             <input class="form-input" type="email" id="return_email" name="return_email"
-              placeholder="ENTER SECURE CHANNEL" required />
+              placeholder="Enter your email..." required />
           </div>
 
           <!-- Budget -->
           <div class="form-group">
             <label class="form-label" for="mission_budget">
               <span class="material-symbols-outlined" style="font-size:14px;">attach_money</span>
-              MISSION_BUDGET
+              Project Budget
             </label>
             <div class="select-wrap">
               <select class="form-input form-select" id="mission_budget" name="mission_budget">
-                <option disabled selected value="">SELECT ALLOCATION</option>
-                <option value="alpha">&lt; $300 (ALPHA TIER)</option>
-                <option value="beta">$300 – $1K (BETA TIER)</option>
-                <option value="gamma">&gt; $1K (OMEGA TIER)</option>
+                <option disabled selected value="">Select a range...</option>
+                <option value="1k-5k">$1k - $5k</option>
+                <option value="5k-10k">$5k - $10k</option>
+                <option value="10k-25k">$10k - $25k</option>
+                <option value="25k+">$25k+</option>
               </select>
               <span class="material-symbols-outlined select-arrow">arrow_drop_down</span>
             </div>
@@ -197,15 +198,15 @@
           <div class="form-group">
             <label class="form-label" for="project_directive">
               <span class="material-symbols-outlined" style="font-size:14px;">description</span>
-              PROJECT_DIRECTIVE
+              Project Details
             </label>
             <textarea class="form-input form-textarea" id="project_directive" name="project_directive"
-              placeholder="TRANSMIT MISSION PARAMETERS..." rows="4" required></textarea>
+              placeholder="Tell me about your project..." rows="4" required></textarea>
           </div>
 
           <!-- Submit -->
           <button class="submit-btn" type="submit" id="submitBtn">
-            <span id="submitText">INITIATE_HANDSHAKE</span>
+            <span id="submitText">SEND MESSAGE</span>
             <span class="material-symbols-outlined submit-icon" id="submitIcon">send</span>
           </button>
 
@@ -776,7 +777,7 @@
       // Reset state
       errorMsg.style.display = 'none';
       btn.disabled = true;
-      text.textContent = 'TRANSMITTING...';
+      text.textContent = 'SENDING...';
       icon.textContent = 'hourglass_empty';
 
       const payload = {

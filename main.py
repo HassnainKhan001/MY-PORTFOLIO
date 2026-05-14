@@ -25,8 +25,8 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="MH.SYS – Muhammad Hasnain Portfolio",
-    description="AI ORCHESTRATOR personal portfolio with integrated agent backend.",
-    version="2.4.0",
+    description="AI Automation Expert personal portfolio with integrated assistant backend.",
+    version="3.0.0",
     docs_url="/api/docs",
     redoc_url="/api/redoc",
 )
@@ -53,14 +53,14 @@ BASE_DIR = Path(__file__).resolve().parent
 
 KB = {
     "name": "Muhammad Hasnain",
-    "title": "Full AI Integrated Software Developer & Automation Engineer",
-    "role": "Official AI Portfolio Assistant",
+    "title": "AI Automation Expert & Software Developer",
+    "role": "Official Assistant",
     "location": "Pakistan // Remote Worldwide",
     "email": "hassnainpasha001@gmail.com",
     "github": "https://github.com/HassnainKhan001",
     "linkedin": "https://www.linkedin.com/in/muhammad-hasnain-28840b382/",
-    "availability": "Open to new missions. Response within 24h.",
-    "experience_summary": "He has made many high-quality software projects, specializing in full AI-integrated solutions that drive business efficiency.",
+    "availability": "Currently open for new projects. I'll get back to you within 24 hours.",
+    "experience_summary": "He builds high-quality software and smart AI tools that help businesses grow and run more efficiently.",
     
     "expertise": [
         "Software Development",
@@ -110,14 +110,14 @@ KB = {
             "capabilities": ["AI-Powered Social Media & Business Automation", "Chatbot Development for business", "AI Solutions for Modern Businesses"]
         },
         {
-            "name": "AI Neural Agents",
+            "name": "Custom AI Assistants",
             "desc": "Building smart conversational AI systems that turn business data into interactive experiences.",
-            "capabilities": ["Turning Ideas Into Intelligent AI Products", "Conversational AI & Automation Developer", "Custom AI Assistant & Automation Developer"]
+            "capabilities": ["Turning Ideas Into Intelligent AI Products", "Conversational AI Developer", "Custom AI Assistant Developer"]
         }
     ],
 
-    "philosophy": "Orchestrating intelligence to solve human inefficiency through sovereign logic systems.",
-    "current_mission": "Acting as the intelligent digital representative of Muhammad Hasnain.",
+    "philosophy": "Using smart AI and automation to solve business problems and improve efficiency.",
+    "current_mission": "Helping businesses leverage AI to automate workflows and scale faster.",
 }
 
 # ─────────────────────────────────────────────
@@ -224,29 +224,29 @@ def build_response(intent: str, query: str, session_id: str = "anonymous") -> di
         }
 
     responses = {
-        "greeting": f"Hello! I am the official AI Portfolio Assistant for Muhammad Hasnain. I can provide details on his software development, AI automation, and chatbot expertise. How can I help you?",
-        "identity": f"Muhammad Hasnain is a {KB['title']}. {KB['experience_summary']} He focuses on orchestrating intelligence to solve human inefficiency through sovereign logic systems.",
-        "skills": f"He specializes in software development, AI automation, and AI chatbot development, utilizing a modern stack of {', '.join(KB['skills'][:4])} to build full AI-integrated systems.",
-        "projects": f"Muhammad has made many software projects including Social Media Automation Bots, CRM workflows, and AI Agent systems. His work focuses on seamless AI integration and performance.",
-        "services": f"Muhammad specializes in AI chatbot development, workflow automation, WhatsApp/Telegram integration, and full-stack AI applications.",
-        "availability": f"He is currently open to new professional opportunities and missions. You can reach him at {KB['email']} or connect via LinkedIn.",
-        "automation": "Yes, he develops automation systems that integrate APIs, CRMs, chat platforms, and AI tools to reduce manual work and improve operational efficiency.",
-        "ai": "He builds AI agents and assistants capable of reasoning, multi-step automation, and intelligent task execution for complex business needs.",
-        "architecture": "He follows a modern architecture focusing on API integrations, microservices, and scalable cloud deployments to ensure system reliability.",
-        "personality": "Muhammad is a disciplined and results-oriented engineer who believes in orchestrating intelligence to solve human inefficiency.",
-        "success": "His systems have generated significant operational value by automating complex workflows across various industries.",
-        "roi": "By reducing manual overhead and optimizing processes, his AI solutions typically deliver a strong return on investment within the first few months.",
-        "industries": "He has experience working across sectors like Real Estate, FinTech, E-commerce, and SaaS.",
-        "status": "I am online and operating at peak capacity. All systems related to Muhammad's portfolio are nominal.",
-        "small_talk": "I'm doing great. As Muhammad's digital representative, I'm always ready to discuss his latest innovations in AI.",
+        "greeting": f"Hello! I am Hasnain's AI Assistant. I can help you with questions about his software projects, AI automation, and how he can help your business. How can I assist you today?",
+        "identity": f"Muhammad Hasnain is an {KB['title']}. {KB['experience_summary']} He focuses on using smart AI to make businesses more efficient.",
+        "skills": f"He specializes in software development and AI automation, using tools like {', '.join(KB['skills'][:4])} to build smart, scalable systems.",
+        "projects": f"Muhammad has built several successful projects, including social media automation tools, business workflows, and custom AI assistants.",
+        "services": f"His services include custom AI development, business automation, and building smart software that grows with your company.",
+        "availability": f"He is currently taking on new projects! You can reach him at {KB['email']} or via LinkedIn to discuss your ideas.",
+        "automation": "Yes, he builds automation systems that help businesses save time by handling repetitive tasks using AI and smart integrations.",
+        "ai": "He specializes in building smart AI tools and assistants that can understand data and help automate complex business processes.",
+        "architecture": "He builds systems with a focus on speed, reliability, and security, ensuring they can grow as your business grows.",
+        "personality": "Muhammad is a professional and results-driven developer who values clear communication and high-quality work.",
+        "success": "His projects have helped businesses automate their workflows and save hundreds of hours of manual work.",
+        "roi": "Most of his AI and automation solutions pay for themselves quickly by reducing manual work and improving business efficiency.",
+        "industries": "He has experience working with businesses in Real Estate, FinTech, E-commerce, and SaaS.",
+        "status": "I'm online and ready to help! All systems are running smoothly.",
+        "small_talk": "I'm doing great! How can I help you learn more about Muhammad's work today?",
     }
 
     # Special technical detail boost
     if is_technical and intent in ["skills", "projects", "architecture"]:
         if intent == "skills":
-            responses["skills"] = f"His full stack includes {', '.join(KB['skills'])}. He specializes in RAG pipelines, FastAPI backends, and autonomous agent orchestration."
+            responses["skills"] = f"His tech stack includes {', '.join(KB['skills'])}. He specializes in building AI pipelines and automated backend systems."
         elif intent == "architecture":
-            responses["architecture"] = "He architected the Nexus OS and Jarvis systems using event-driven logic, microservices, and vector-database grounding for high-precision AI retrieval."
+            responses["architecture"] = "He builds scalable software using a modern stack, microservices, and smart data search (RAG) for high performance."
 
     if intent in responses:
         return {"intent": intent, "message": responses[intent]}
@@ -262,7 +262,7 @@ def build_response(intent: str, query: str, session_id: str = "anonymous") -> di
 
     return {
         "intent": "fallback",
-        "message": "I don’t have that information yet. However, I can tell you about Muhammad's AI projects, automation services, or technical skills.",
+        "message": "I don't have that information yet, but I can tell you about Muhammad's projects, automation services, or technical skills.",
         "data": {},
     }
 
@@ -360,8 +360,8 @@ async def submit_contact(payload: ContactPayload):
         "ok": True,
         "status": "TRANSMISSION_RECEIVED",
         "message": (
-            f"Handshake successful, Commander {payload.commander_name}. "
-            f"Your directive has been logged. Expect a response within 24 hours."
+            f"Thanks for reaching out, {payload.commander_name}! "
+            f"I've received your message and Muhammad will get back to you within 24 hours."
         ),
         "agent_preview": agent_resp["message"],
         "received_at": datetime.utcnow().isoformat() + "Z",
