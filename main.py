@@ -380,9 +380,12 @@ async def send_email_notification(payload: ContactPayload):
         f"---------------------------------------\n\n"
     )
     
-    # 1. Local Persistence (Always save locally just in case)
-    with open("inquiries.log", "a", encoding="utf-8") as f:
-        f.write(log_entry)
+    # 1. Local Persistence (Skip if on read-only filesystem like Vercel)
+    try:
+        with open("inquiries.log", "a", encoding="utf-8") as f:
+            f.write(log_entry)
+    except OSError:
+        logger.warning("Local logging failed (likely Read-Only FS on Vercel). Proceeding with SMTP only.")
         
     # 2. SMTP Delivery Attempt
     if SMTP_CONFIG["app_password"] == "PLACEHOLDER":
