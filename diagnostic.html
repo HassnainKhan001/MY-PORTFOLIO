@@ -77,9 +77,37 @@
       <!-- Card 3: Intelligent AI (Full Width) -->
       <div class="showcase-visual">
         <div class="showcase-grid-overlay" aria-hidden="true"></div>
-        <div class="robot-container">
-          <div class="robot-glow"></div>
-          <img src="/JARVIS.webp" alt="JARVIS System Blueprint" class="robot-image" />
+        <div class="neural-engine">
+          <svg class="neural-nodes" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#00f5ff" stop-opacity="0.5" />
+                <stop offset="100%" stop-color="#00f5ff" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <!-- Background Web -->
+            <path d="M10,10 L90,90 M10,90 L90,10 M50,0 L50,100 M0,50 L100,50" stroke="rgba(0,245,255,0.05)"
+              stroke-width="0.2" />
+            <!-- Active Nodes -->
+            <circle class="node pulse-1" cx="20" cy="30" r="1" fill="#00f5ff" />
+            <circle class="node pulse-2" cx="80" cy="40" r="1" fill="#00f5ff" />
+            <circle class="node pulse-3" cx="40" cy="70" r="1" fill="#00f5ff" />
+            <circle class="node pulse-1" cx="60" cy="20" r="1" fill="#00f5ff" />
+            <circle class="node pulse-2" cx="30" cy="80" r="1" fill="#00f5ff" />
+            <!-- Data Stream Lines -->
+            <line class="data-line" x1="20" y1="30" x2="60" y2="20" stroke="#00f5ff" stroke-width="0.1"
+              stroke-dasharray="1,1" />
+            <line class="data-line" x1="60" y1="20" x2="80" y2="40" stroke="#00f5ff" stroke-width="0.1"
+              stroke-dasharray="1,1" />
+            <line class="data-line" x1="80" y1="40" x2="40" y2="70" stroke="#00f5ff" stroke-width="0.1"
+              stroke-dasharray="1,1" />
+          </svg>
+          <div class="neural-core">
+            <div class="core-ring"></div>
+            <div class="core-ring"></div>
+            <div class="core-ring"></div>
+            <span class="core-label">AI_CORE</span>
+          </div>
           <div class="scanner-line"></div>
         </div>
         <div class="showcase-overlay-gradient"></div>
@@ -319,38 +347,88 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgba(99,247,255,0.1)'/%3E%3C/svg%3E");
     }
 
-    .robot-container {
+    .neural-engine {
       width: 100%;
       height: 100%;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #000;
+      background: radial-gradient(circle at center, #0a0a0f 0%, #000 100%);
+      overflow: hidden;
     }
 
-    .robot-glow {
+    .neural-nodes {
       position: absolute;
-      width: 80%;
-      height: 80%;
-      background: radial-gradient(circle, rgba(0, 245, 255, 0.12) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 1;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
     }
 
-    .robot-image {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      z-index: 2;
-      mix-blend-mode: screen;
-      filter: contrast(1.2) brightness(1.2);
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    .node {
+      filter: drop-shadow(0 0 5px var(--primary-fixed));
     }
 
-    .robot-container:hover .robot-image {
-      transform: scale(1.03);
-      filter: contrast(1.15) brightness(1.2) drop-shadow(0 0 30px rgba(0, 245, 255, 0.2));
+    .pulse-1 { animation: pulse 2s infinite; }
+    .pulse-2 { animation: pulse 2.5s infinite 0.5s; }
+    .pulse-3 { animation: pulse 3s infinite 1s; }
+
+    @keyframes pulse {
+      0%, 100% { r: 1; opacity: 0.5; }
+      50% { r: 1.5; opacity: 1; }
+    }
+
+    .data-line {
+      stroke-dashoffset: 10;
+      animation: dash 5s linear infinite;
+    }
+
+    @keyframes dash {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .neural-core {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .core-ring {
+      position: absolute;
+      border: 1px solid var(--primary-fixed);
+      border-radius: 50%;
+      opacity: 0.3;
+    }
+
+    .core-ring:nth-child(1) {
+      width: 100%; height: 100%;
+      border-style: dashed;
+      animation: spin 10s linear infinite;
+    }
+
+    .core-ring:nth-child(2) {
+      width: 80%; height: 80%;
+      border-style: double;
+      animation: spin 15s linear infinite reverse;
+    }
+
+    .core-ring:nth-child(3) {
+      width: 60%; height: 60%;
+      background: radial-gradient(circle, rgba(0,245,255,0.1) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    .core-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--primary-fixed);
+      letter-spacing: 0.2em;
+      text-shadow: 0 0 10px var(--primary-fixed);
     }
 
     .scanner-line {
@@ -362,14 +440,14 @@
       background: linear-gradient(90deg, transparent, var(--primary-fixed), transparent);
       box-shadow: 0 0 15px var(--primary-fixed);
       z-index: 3;
-      opacity: 0.4;
-      animation: scan 4s linear infinite;
+      opacity: 0.2;
+      animation: scan 6s linear infinite;
     }
 
     @keyframes scan {
       0% { top: 0; opacity: 0; }
-      10% { opacity: 0.4; }
-      90% { opacity: 0.4; }
+      10% { opacity: 0.2; }
+      90% { opacity: 0.2; }
       100% { top: 100%; opacity: 0; }
     }
 
