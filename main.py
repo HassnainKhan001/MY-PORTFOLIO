@@ -7,6 +7,8 @@ Run: uvicorn main:app --reload --port 8080
 import re
 import json
 import logging
+import smtplib
+from email.mime.text import MIMEText
 from datetime import datetime
 from pathlib import Path
 
@@ -22,6 +24,21 @@ from pydantic import BaseModel
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
 logger = logging.getLogger(__name__)
+
+# ─────────────────────────────────────────────
+# EMAIL CONFIGURATION (REQUIRED FOR INBOX DELIVERY)
+# ─────────────────────────────────────────────
+# 1. Go to Google Account -> Security -> 2-Step Verification
+# 2. Search for "App Passwords" and generate a new one.
+# 3. Replace "PLACEHOLDER" with your 16-character App Password.
+SMTP_CONFIG = {
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "sender_email": "hassnainpasha001@gmail.com",
+    "receiver_email": "hassnainpasha001@gmail.com", # Your primary inbox
+    "app_password": "ixyl adjz hjwj lpod", 
+}
+# ─────────────────────────────────────────────
 
 app = FastAPI(
     title="MH.SYS – Muhammad Hasnain Portfolio",
@@ -118,6 +135,13 @@ KB = {
 
     "philosophy": "Using smart AI and automation to solve business problems and improve efficiency.",
     "current_mission": "Helping businesses leverage AI to automate workflows and scale faster.",
+    "work_ethic": "Atomic consistency over 1825+ days. Hard work is the baseline; excellence is the variable.",
+    "success_metrics": "$2M+ operational value generated. 50+ successful deployments. 99.9% system reliability.",
+    "pipeline": "AI Orchestration -> Process Optimization -> Intelligent Deployment.",
+    "projects_deployed": 54,
+    "automation_value": "$2.1M",
+    "uptime": "99.98%",
+    "experience_years": 5
 }
 
 # ─────────────────────────────────────────────
@@ -182,17 +206,18 @@ def search_kb(query: str) -> str:
     q = query.lower()
     matches = []
     
-    # Flatten KB skills and projects for searching
+    # Flatten KB skills and projects for searching (using .get() for safety)
     searchable_text = {
-        "Skills": ", ".join(KB["skills"]),
-        "Projects": " ".join([p["name"] + " " + p["description"] for p in KB["projects"]]),
-        "Philosophy": KB["philosophy"],
-        "Work Ethic": KB["work_ethic"],
-        "Success": KB["success_metrics"],
-        "Current Mission": KB["current_mission"]
+        "Skills": ", ".join(KB.get("skills", [])),
+        "Projects": " ".join([p.get("name", "") + " " + p.get("description", "") for p in KB.get("projects", [])]),
+        "Philosophy": KB.get("philosophy", ""),
+        "Work Ethic": KB.get("work_ethic", ""),
+        "Success": KB.get("success_metrics", ""),
+        "Current Mission": KB.get("current_mission", "")
     }
     
     for category, text in searchable_text.items():
+        if not text: continue
         # Check if any word from query (longer than 3 chars) is in the category text
         words = [w for w in re.findall(r"\w+", q) if len(w) > 3]
         if any(w in text.lower() for w in words):
@@ -341,6 +366,45 @@ class ContactPayload(BaseModel):
     project_directive: str
 
 
+async def send_email_notification(payload: ContactPayload):
+    """
+    Handles email dispatch logic via SMTP. 
+    Logs locally to inquiries.log and attempts to send to Gmail.
+    """
+    timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    log_entry = (
+        f"--- INQUIRY RECEIVED: {timestamp} ---\n"
+        f"From: {payload.commander_name} <{payload.return_email}>\n"
+        f"Budget: {payload.mission_budget}\n"
+        f"Directive: {payload.project_directive}\n"
+        f"---------------------------------------\n\n"
+    )
+    
+    # 1. Local Persistence (Always save locally just in case)
+    with open("inquiries.log", "a", encoding="utf-8") as f:
+        f.write(log_entry)
+        
+    # 2. SMTP Delivery Attempt
+    if SMTP_CONFIG["app_password"] == "PLACEHOLDER":
+        logger.warning("SMTP skipped: App Password is still 'PLACEHOLDER'. Logging only to inquiries.log.")
+        return
+
+    try:
+        msg = MIMEText(log_entry)
+        msg['Subject'] = f"🚀 New Portfolio Inquiry: {payload.commander_name}"
+        msg['From'] = SMTP_CONFIG["sender_email"]
+        msg['To'] = SMTP_CONFIG["receiver_email"]
+
+        with smtplib.SMTP(SMTP_CONFIG["smtp_server"], SMTP_CONFIG["smtp_port"]) as server:
+            server.starttls() # Secure connection
+            server.login(SMTP_CONFIG["sender_email"], SMTP_CONFIG["app_password"])
+            server.send_message(msg)
+            
+        logger.info(f"TRANSMISSION_DELIVERED to {SMTP_CONFIG['receiver_email']} via SMTP.")
+    except Exception as e:
+        logger.error(f"SMTP Transmission Failed: {str(e)}")
+
+
 @app.post("/api/contact", tags=["Contact"])
 async def submit_contact(payload: ContactPayload):
     """
@@ -352,7 +416,10 @@ async def submit_contact(payload: ContactPayload):
         f"email={payload.return_email!r} | budget={payload.mission_budget!r}"
     )
 
-    # Auto-agent response based on project directive
+    # 1. Deliver the "Email" (Notification)
+    await send_email_notification(payload)
+
+    # 2. Auto-agent response based on project directive
     intent = classify_intent(payload.project_directive)
     agent_resp = build_response(intent, payload.project_directive)
 
