@@ -380,9 +380,12 @@ async def send_email_notification(payload: ContactPayload):
         f"---------------------------------------\n\n"
     )
     
-    # 1. Local Persistence (Always save locally just in case)
-    with open("inquiries.log", "a", encoding="utf-8") as f:
-        f.write(log_entry)
+    # 1. Local Persistence (Try to save locally, skip if read-only like Vercel)
+    try:
+        with open("inquiries.log", "a", encoding="utf-8") as f:
+            f.write(log_entry)
+    except OSError:
+        logger.warning("Local logging skipped: Read-only filesystem detected.")
         
     # 2. SMTP Delivery Attempt
     if SMTP_CONFIG["app_password"] == "PLACEHOLDER":
@@ -455,9 +458,12 @@ async def submit_contact_form(
 
 @app.get("/jarvis_robotics.png", tags=["Assets"])
 async def get_jarvis_img():
-    """Serves the generated robotics image from the app data directory."""
-    img_path = r"C:\Users\SAQIB COMPUTERS\.gemini\antigravity\brain\398448e3-0470-4d47-87da-aa4997ce884d\jarvis_robotics_system_1778729655143.png"
-    return FileResponse(img_path)
+    """Serves the robotics image from the local project directory."""
+    img_path = BASE_DIR / "jarvis_robotics.png"
+    if img_path.exists():
+        return FileResponse(img_path)
+    # Return 404 if missing, rather than crashing the server
+    return JSONResponse(status_code=404, content={"error": "IMAGE_NOT_FOUND"})
 
 
 # ─────────────────────────────────────────────
