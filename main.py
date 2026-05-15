@@ -453,14 +453,10 @@ async def submit_contact_form(
     return result
 
 
-@app.get("/jarvis_robotics.png", tags=["Assets"])
-async def get_jarvis_img():
-    """Serves the robotics image from the project root (deployment-ready)."""
-    img_path = BASE_DIR / "jarvis_robotics.png"
-    if not img_path.exists():
-        # Fallback for local development if not yet moved
-        local_fallback = r"C:\Users\SAQIB COMPUTERS\.gemini\antigravity\brain\398448e3-0470-4d47-87da-aa4997ce884d\jarvis_robotics_system_1778729655143.png"
-        return FileResponse(local_fallback)
+@app.get("/robot.jpg", tags=["Assets"])
+async def get_robot_img():
+    """Serves the user's custom robot image."""
+    img_path = BASE_DIR / "robot.jpg"
     return FileResponse(img_path)
 
 
