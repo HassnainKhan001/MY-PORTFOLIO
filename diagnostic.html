@@ -79,7 +79,7 @@
         <div class="showcase-grid-overlay" aria-hidden="true"></div>
         <div class="robot-container">
           <div class="robot-glow"></div>
-          <img src="/robot.jpg" alt="AI Assistant Unit" class="robot-image" />
+          <img src="/JARVIS.webp" alt="JARVIS System Blueprint" class="robot-image" />
           <div class="scanner-line"></div>
         </div>
         <div class="showcase-overlay-gradient"></div>
@@ -326,7 +326,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #1a1a20;
+      background: #000;
     }
 
     .robot-glow {
@@ -339,11 +339,12 @@
     }
 
     .robot-image {
-      max-width: 85%;
-      max-height: 85%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
       z-index: 2;
-      filter: contrast(1.1) brightness(1.1);
+      mix-blend-mode: screen;
+      filter: contrast(1.2) brightness(1.2);
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
 

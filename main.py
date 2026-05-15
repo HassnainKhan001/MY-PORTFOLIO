@@ -453,10 +453,10 @@ async def submit_contact_form(
     return result
 
 
-@app.get("/robot.jpg", tags=["Assets"])
-async def get_robot_img():
-    """Serves the user's custom robot image."""
-    img_path = BASE_DIR / "robot.jpg"
+@app.get("/JARVIS.webp", tags=["Assets"])
+async def get_jarvis_asset():
+    """Serves the user's JARVIS blueprint image."""
+    img_path = BASE_DIR / "JARVIS.webp"
     return FileResponse(img_path)
 
 
