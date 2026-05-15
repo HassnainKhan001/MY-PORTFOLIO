@@ -824,52 +824,71 @@
 
     .quick-prompts {
       display: flex;
-      gap: 0.75rem;
+      gap: 1rem;
       overflow-x: auto;
-      padding-bottom: 0.5rem;
+      padding: 0.5rem 0.25rem 1rem;
       scrollbar-width: none;
-    }
-
-    .quick-prompts::-webkit-scrollbar {
-      display: none;
     }
 
     .quick-btn {
       display: flex;
-      align-items: center;
-      gap: 0.625rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
       white-space: nowrap;
-      padding: 0.625rem 1rem;
+      padding: 1.25rem;
+      min-width: 160px;
       border: 1px solid rgba(0, 245, 255, 0.1);
       color: var(--on-surface-variant);
-      background: rgba(19, 19, 24, 0.4);
-      backdrop-filter: blur(8px);
+      background: rgba(13, 13, 18, 0.6);
+      backdrop-filter: blur(12px);
       font-family: var(--font-mono);
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-      border-radius: 4px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .quick-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 0; height: 1px;
+      background: var(--primary-fixed);
+      transition: width 0.4s;
+    }
+
+    .quick-btn:hover::before {
+      width: 100%;
     }
 
     .quick-btn .material-symbols-outlined {
-      font-size: 16px;
+      font-size: 20px;
       color: var(--primary-fixed);
-      opacity: 0.7;
-      transition: opacity 0.3s;
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+
+    .quick-btn span:last-child {
+      white-space: normal;
+      line-height: 1.4;
+      text-align: left;
     }
 
     .quick-btn:hover {
       background: rgba(0, 245, 255, 0.05);
-      border-color: rgba(0, 245, 255, 0.4);
-      color: var(--primary-fixed);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0, 245, 255, 0.1);
+      border-color: rgba(0, 245, 255, 0.3);
+      color: var(--on-surface);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 245, 255, 0.05);
     }
 
     .quick-btn:hover .material-symbols-outlined {
       opacity: 1;
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 5px var(--primary-fixed));
     }
 
     .input-wrap {
