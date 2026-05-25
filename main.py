@@ -89,7 +89,8 @@ KB = {
 
     "skills": [
         "JavaScript", "TypeScript", "Node.js", "React", "Next.js", "Python", 
-        "REST APIs", "AI SDKs & LLM APIs", "Databases", "Cloud Integrations"
+        "n8n", "Make.com", "OpenAI", "REST APIs", "AI SDKs & LLM APIs", 
+        "Databases", "Cloud Integrations"
     ],
 
     "projects": [
