@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Assistant | Muhammad Hasnain</title>
+  <title>AI Security Assistant | SecOps & Threat Audit</title>
   <meta name="description"
-    content="Official AI Assistant for Muhammad Hasnain – AI Automation Expert Portfolio + Assistant Backend" />
+    content="Interactive AI Security Assistant by Muhammad Hasnain – SecOps, threat modeling, and LLM red teaming auditor." />
   <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%2300f5ff' stroke-width='1' stroke-dasharray='4,2' opacity='0.3'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%2300f5ff' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%2300f5ff'%3E%3Canimate attributeName='opacity' values='1;0.4;1' dur='3s' repeatCount='indefinite'/%3E%3C/circle%3E%3Cpath d='M50 10 L50 25 M50 75 L50 90 M10 50 L25 50 M75 50 L90 50' stroke='%2300f5ff' stroke-width='2'/%3E%3C/svg%3E" />
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%2300ff66' stroke-width='1' stroke-dasharray='4,2' opacity='0.3'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%2300ff66' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%2300ff66'%3E%3Canimate attributeName='opacity' values='1;0.4;1' dur='3s' repeatCount='indefinite'/%3E%3C/circle%3E%3Cpath d='M50 10 L50 25 M50 75 L50 90 M10 50 L25 50 M75 50 L90 50' stroke='%2300ff66' stroke-width='2'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
@@ -20,8 +20,8 @@
   <nav class="top-nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <div class="nav-logo-dot"></div>
-        <div class="nav-logo-text">MH.<span>SYS</span></div>
+        <div class="nav-logo-dot" style="background:#00ff66;"></div>
+        <div class="nav-logo-text">MH.<span>SEC</span></div>
       </a>
       <ul class="nav-links">
         <li><a href="index.html"><span class="nav-num">01</span>Home</a></li>
@@ -32,8 +32,8 @@
       </ul>
       <div style="display:flex;align-items:center;gap:1rem;">
         <div class="nav-status-badge">
-          <div class="status-dot"></div>
-          <span>System Online</span>
+          <div class="status-dot" style="background:#00ff66;"></div>
+          <span>SEC_MONITOR: ACTIVE</span>
         </div>
         <button class="nav-terminal-btn" title="Terminal">
           <span class="material-symbols-outlined"
@@ -67,11 +67,11 @@
       <!-- Header -->
       <div class="showcase-head">
         <div style="display:flex;align-items:center;gap:0.75rem;">
-          <div class="status-dot-sm"></div>
-          <span class="showcase-label">Assistant Online</span>
+          <div class="status-dot-sm" style="background:#00ff66;"></div>
+          <span class="showcase-label" style="color:#00ff66;">SecOps Bot Active</span>
         </div>
-        <h1 class="showcase-title">AI <span class="text-glow-cyan">EXPERT</span></h1>
-        <p class="showcase-desc">Building the next generation of intelligent tools and automated workflows for businesses.</p>
+        <h1 class="showcase-title">AI <span style="color:#00ff66;text-shadow:0 0 10px rgba(0,255,102,0.4);">SECURITY</span> ASSISTANT</h1>
+        <p class="showcase-desc">Ask about LLM red teaming, prompt injection vulnerabilities, RAG audits, or securing AI pipelines.</p>
       </div>
 
       <!-- Card 3: Intelligent AI (Full Width) -->
@@ -185,10 +185,10 @@
         <div class="message message-ai">
           <div class="message-avatar">
             <span class="material-symbols-outlined"
-              style="font-size:16px;color:var(--primary-fixed);font-variation-settings:'FILL' 0;">terminal</span>
+              style="font-size:16px;color:#00ff66;font-variation-settings:'FILL' 0;">shield</span>
           </div>
           <div class="message-bubble">
-            Hi! I'm Hasnain's AI assistant. I'm here to answer any questions about his skills, projects, or how he can help your business. How can I assist you today?
+            Hi! I'm Hasnain's AI Security Assistant. Ask me about LLM red teaming, prompt injection audits, RAG security, or securing AI pipelines.
           </div>
         </div>
       </div>
@@ -199,16 +199,16 @@
           <p class="chat-hint">Try asking:</p>
           <div class="quick-prompts">
             <button class="quick-btn" onclick="sendQuickPrompt(this)">
-              <span class="material-symbols-outlined">work_history</span>
-              <span>Tell me about his work</span>
+              <span class="material-symbols-outlined">security</span>
+              <span>LLM Red Teaming & RAG Audits</span>
             </button>
             <button class="quick-btn" onclick="sendQuickPrompt(this)">
               <span class="material-symbols-outlined">terminal</span>
-              <span>What is his tech stack?</span>
+              <span>What is your security stack?</span>
             </button>
             <button class="quick-btn" onclick="sendQuickPrompt(this)">
               <span class="material-symbols-outlined">bolt</span>
-              <span>Can he automate my business?</span>
+              <span>How do you secure AI apps?</span>
             </button>
           </div>
         </div>
@@ -1083,18 +1083,18 @@
     // Offline fallback responses (used when server is unreachable)
     const fallback = {
       keywords: {
-        'stack': '> OFFLINE_MODE: Stack — Python (FastAPI, LangChain), JavaScript (React, Next.js), Docker, AWS.',
-        'skill': '> OFFLINE_MODE: Skills — Full-stack AI systems, automation pipelines, RAG chatbots.',
-        'project': '> OFFLINE_MODE: Projects — Nexus OS, Aura AI, J.A.R.V.I.S. All systems ONLINE.',
-        'automat': '> OFFLINE_MODE: Automation — n8n + Python orchestration | $2M+ value | 80% latency reduction.',
-        'ai': '> OFFLINE_MODE: AI — 50+ sovereign modules deployed. GPT-4 + Pinecone + LangChain stack.',
-        'price': '> OFFLINE_MODE: Pricing — Alpha (<$300) | Beta ($300-$1K) | Omega (>$1K).',
-        'person': '> OFFLINE_MODE: Personality — Disciplined, professional, and efficient. Muhammad Hasnain focuses on building smart AI systems for business success.',
-        'work': '> OFFLINE_MODE: Work Ethic — Atomic consistency over 1825+ days. Hard work is the baseline; excellence is the variable.',
-        'succes': '> OFFLINE_MODE: Success — $2M+ operational value generated. 50+ successful deployments. 99.9% system reliability.',
-        'hello': '> OFFLINE_MODE: Handshake initiated. Server offline — running in local mode.',
+        'stack': '> OFFLINE_MODE: Security Stack — Python (PyTorch, SafeTensors), FastAPI, LangChain Guardrails, Docker Security, Vector DB RBAC.',
+        'skill': '> OFFLINE_MODE: Capabilities — LLM Red Teaming, Prompt Injection Defense, RAG Pipeline Audits, Supply Chain Scanning.',
+        'project': '> OFFLINE_MODE: Case Studies — Enterprise RAG Audit, AI Supply Chain Scanner, Nexus SecFlow, Aura Guard.',
+        'secur': '> OFFLINE_MODE: Security Strategy — Zero-trust context validation, input/output sanitization, SafeTensors weight verification.',
+        'ai': '> OFFLINE_MODE: AI Security — Hardened LLM guardrails blocking 99.7% of adversarial prompt injections.',
+        'price': '> OFFLINE_MODE: Audit Tiers — Rapid Scan (<$500) | Full Red Team ($1K-$3K) | Enterprise Supply Chain Defense (Custom).',
+        'person': '> OFFLINE_MODE: Positioning — Ex-developer turned AI Security Engineer. Built it, so he knows how to break and secure it.',
+        'work': '> OFFLINE_MODE: Track Record — 15+ LLM security audits completed. 200+ vulnerabilities discovered and patched.',
+        'succes': '> OFFLINE_MODE: Impact — Zero compromised prompt injections across all audited enterprise client RAG pipelines.',
+        'hello': '> OFFLINE_MODE: SecOps Bot Active. Running local threat analysis mode.',
       },
-      default: '> OFFLINE_MODE: Server unreachable. For full AI responses, start the backend:\n> uvicorn main:app --reload --port 8080',
+      default: '> OFFLINE_MODE: SecOps Assistant Online. For live AI model responses, start backend:\n> uvicorn main:app --port 8000',
     };
 
     function getFallback(query) {
@@ -1141,9 +1141,9 @@
 
     function sendQuickPrompt(btn) {
       const map = {
-        'work_historyTell me about his work': 'What is your professional background and work experience?',
-        'terminalWhat is his tech stack?': 'What technologies and programming languages do you specialize in?',
-        'boltCan he automate my business?': 'How can you help automate my business processes using AI?',
+        'securityLLM Red Teaming & RAG Audits': 'What is your process for LLM red teaming and RAG prompt injection audits?',
+        'terminalWhat is your security stack?': 'What technologies and frameworks do you use for AI security and model defense?',
+        'boltHow do you secure AI apps?': 'How do you prevent prompt injections, jailbreaks, and data leakage in AI applications?',
       };
       const rawLabel = btn.textContent.trim();
       const query = map[rawLabel] || btn.querySelector('span:last-child').textContent.trim();

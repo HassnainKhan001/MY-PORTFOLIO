@@ -17,11 +17,11 @@
   --on-surface-variant: #b9caca;
   --outline: #849495;
   --outline-variant: #3a494a;
-  --primary-fixed: #00F5FF;       /* Electric Cyan */
-  --secondary: #7B2FFF;           /* Violet-Purple */
-  --primary-fixed-dim: #00dce5;
-  --primary-container: #00f5ff;
-  --secondary-container: #6800ec;
+  --primary-fixed: #00FF66;       /* Neon Cyber Green */
+  --secondary: #00E5FF;           /* Electric Cyan */
+  --primary-fixed-dim: #00cc52;
+  --primary-container: #00ff66;
+  --secondary-container: #00b2cc;
   --font-headline: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;

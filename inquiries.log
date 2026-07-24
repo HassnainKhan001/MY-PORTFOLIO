@@ -40,3 +40,9 @@ Budget: 25k+
 Directive: hello sir
 ---------------------------------------
 
+--- INQUIRY RECEIVED: 2026-07-16 10:12:56 ---
+From: Test User <test@example.com>
+Budget: 5k-10k
+Directive: Hello sir, this is a test to verify if email goes to destination.
+---------------------------------------
+
