@@ -1,16 +1,42 @@
-<!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | AI Security Engineering by Muhammad Hasnain</title>
-  <meta name="description" content="Muhammad Hasnain provides LLM red teaming, prompt injection auditing, secure AI architecture, and AI supply chain defense services." />
+  <title>Offensive Security Services | Muhammad Hasnain — AI Security Master</title>
+  <meta name="description" content="AI Security services including LLM Red Teaming, RAG pipeline audits, AI supply chain defense, and guardrail integration by Muhammad Hasnain." />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%2300FF41' stroke-width='1' stroke-dasharray='4,2' opacity='0.4'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%2300FF41' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%2300FF41'%3E%3Canimate attributeName='opacity' values='1;0.4;1' dur='2s' repeatCount='indefinite'/%3E%3C/circle%3E%3C/svg%3E" />
   <link rel="stylesheet" href="index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 </head>
-<body style="background:#0A0A0F;" class="mesh-bg">
 
+<body class="matrix-bg">
+
+  <!-- CRT Overlay & Scanline -->
+  <div class="crt-overlay"></div>
   <div class="scanline"></div>
+
+  <!-- HUD Left Sidebar -->
+  <div class="hud-sidebar">
+    <span>SEC.SHIELD: ACTIVE</span>
+    <span>THREAT.LEVEL: HIGH</span>
+    <span>SYS.VERIFIED: YES</span>
+    <div class="hud-bars">
+      <div class="hud-bar" style="animation-delay:0s"></div>
+      <div class="hud-bar" style="animation-delay:0.3s"></div>
+      <div class="hud-bar" style="animation-delay:0.6s"></div>
+    </div>
+  </div>
+
+  <!-- HUD Radar -->
+  <div class="hud-radar">
+    <div class="hud-radar-inner">
+      <div class="hud-radar-dot"></div>
+      <div class="hud-radar-spin"></div>
+    </div>
+  </div>
 
   <!-- Navigation -->
   <nav class="top-nav">
@@ -23,14 +49,17 @@
         <li><a href="index.html"><span class="nav-num">01</span>Home</a></li>
         <li><a href="projects.html"><span class="nav-num">02</span>Projects</a></li>
         <li><a href="services.html" class="active"><span class="nav-num">03</span>Services</a></li>
-        <li><a href="neural-net.html"><span class="nav-num">04</span>How it Works</a></li>
+        <li><a href="neural-net.html"><span class="nav-num">04</span>How It Works</a></li>
         <li><a href="diagnostic.html"><span class="nav-num">05</span>AI Assistant</a></li>
         <li><a href="contact.html"><span class="nav-num">06</span>Contact</a></li>
       </ul>
-      <div style="display:flex;align-items:center;gap:1rem;">
-        <a href="contact.html" class="btn-hire-sm">Request Audit</a>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <div class="nav-info">
+          <span class="nav-info-top">AI Threat Intel</span>
+          <span class="nav-info-bottom">SYSTEM SECURE</span>
+        </div>
         <button class="nav-terminal-btn" title="Terminal">
-          <span class="material-symbols-outlined" style="font-size:18px;font-variation-settings:'FILL' 1;">terminal</span>
+          <span class="material-symbols-outlined" style="font-size:18px;font-variation-settings:'FILL' 0;">terminal</span>
         </button>
       </div>
       <button class="mobile-menu-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
@@ -41,290 +70,94 @@
       <a href="index.html">01 — Home</a>
       <a href="projects.html">02 — Projects</a>
       <a href="services.html">03 — Services</a>
-      <a href="neural-net.html">04 — How it Works</a>
+      <a href="neural-net.html">04 — How It Works</a>
       <a href="diagnostic.html">05 — AI Assistant</a>
       <a href="contact.html">06 — Contact</a>
     </div>
   </nav>
 
-  <main style="padding-top:8rem;padding-bottom:4rem;max-width:1440px;margin:0 auto;padding-left:4rem;padding-right:4rem;">
-    <!-- Header -->
-    <header style="margin-bottom:3rem;text-align:center;" class="animate-fade-up">
-      <div class="page-header-tag">
-        <div class="status-dot"></div>
-        <span>// Security Capabilities</span>
-      </div>
-      <h1 class="page-title text-glow-cyan">HOW I SECURE AI SYSTEMS</h1>
-      <p class="page-subtitle">From LLM red teaming to supply chain defense — I find and fix vulnerabilities before attackers do.</p>
-    </header>
+  <main style="padding-top: 8rem; padding-bottom: 6rem;">
+    <div class="container">
+      
+      <!-- Header -->
+      <header class="animate-fade-up" style="margin-bottom: 4rem;">
+        <div class="section-label">// AI Attack & Defense Services</div>
+        <h1 class="section-title text-glow" style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-top: 0.5rem;">
+          OFFENSIVE <span style="color:#fff;">SECURITY ENGAGEMENTS</span>
+        </h1>
+        <p style="font-family: var(--font-mono); font-size: 13px; color: var(--on-surface-dim); margin-top: 1rem; max-width: 650px; line-height: 1.8;">
+          Tailored security audits, red teaming exercises, and architectural defense for high-stakes AI applications and enterprise systems.
+        </p>
+      </header>
 
-    <div class="services-grid">
-      <!-- Card 1: Secure AI Architecture -->
-      <div class="service-card svc-schematic-1 glass-panel animate-fade-up stagger-1">
-        <div class="svc-status">
-          <span>STAT: ONLINE</span>
-          <div class="status-dot-sm"></div>
-        </div>
-        <div class="svc-icon">
-          <span class="material-symbols-outlined" style="color:var(--primary-fixed);font-variation-settings:'FILL' 0;">shield</span>
-        </div>
-        <h3 class="service-title">Secure AI System Architecture</h3>
-        <p class="service-desc">I design and audit AI-powered applications with a security-first mindset — preventing data leakage, enforcing strict role-based access controls (RBAC), and building secure LLM wrappers and API gateways.</p>
-        <ul class="service-capabilities">
-          <li><span class="capability-dot"></span>Threat modeling for LLM-powered apps</li>
-          <li><span class="capability-dot"></span>Secure API gateway & RBAC enforcement</li>
-          <li><span class="capability-dot"></span>Data leakage & PII protection in AI pipelines</li>
-        </ul>
-        <div class="svc-bottom-fade"></div>
-        <div style="margin-top:auto; padding-top:1.5rem; border-top:1px solid rgba(0,255,102,0.12); font-family:'JetBrains Mono',monospace; font-size:9px; color:#00ff66; letter-spacing:0.2em;">OWASP LLM01 · LLM02 · LLM06</div>
-      </div>
+      <!-- Services Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
 
-      <!-- Card 2: LLM Red Teaming -->
-      <div class="service-card glass-panel animate-fade-up stagger-2" style="border-color:rgba(0,229,255,0.3);">
-        <div class="svc-dotsbg" aria-hidden="true"></div>
-        <div class="svc-status">
-          <span>STAT: ACTIVE</span>
-          <div class="status-dot-sm" style="background:var(--secondary);animation-delay:0.5s;"></div>
+        <!-- Service 1 -->
+        <div class="glass-panel-elite hover-z-shift animate-fade-up stagger-1" style="padding: 2.5rem; border-top: 2px solid var(--green);">
+          <div style="font-family: var(--font-mono); font-size: 10px; color: var(--green); margin-bottom: 1rem; letter-spacing: 0.2em;">SERVICE // 01</div>
+          <h3 style="font-family: var(--font-headline); font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem;">LLM Red Teaming & Jailbreak Auditing</h3>
+          <p style="font-family: var(--font-body); font-size: 13px; color: var(--on-surface-dim); line-height: 1.8; margin-bottom: 1.5rem;">
+            Adversarial probing of your LLM endpoints to identify prompt injections, goal hijacking, guardrail bypasses, and system instruction exfiltration.
+          </p>
+          <ul style="list-style: none; font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+            <li><span style="color: var(--green); margin-right: 6px;">[✓]</span> Direct & Indirect Prompt Injection</li>
+            <li><span style="color: var(--green); margin-right: 6px;">[✓]</span> System Instruction Extraction</li>
+            <li><span style="color: var(--green); margin-right: 6px;">[✓]</span> Guardrail & Safety Filter Testing</li>
+          </ul>
+          <a href="contact.html" class="btn-primary" style="width: 100%;"><span>ENGAGE SERVICE</span></a>
         </div>
-        <div class="svc-icon" style="border-color:rgba(0,229,255,0.3);">
-          <span class="material-symbols-outlined" style="color:var(--secondary);font-variation-settings:'FILL' 0;">bolt</span>
+
+        <!-- Service 2 -->
+        <div class="glass-panel-elite hover-z-shift animate-fade-up stagger-2" style="padding: 2.5rem; border-top: 2px solid var(--green);">
+          <div style="font-family: var(--font-mono); font-size: 10px; color: var(--green); margin-bottom: 1rem; letter-spacing: 0.2em;">SERVICE // 02</div>
+          <h3 style="font-family: var(--font-headline); font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem;">RAG Pipeline Vulnerability Audit</h3>
+          <p style="font-family: var(--font-body); font-size: 13px; color: var(--on-surface-dim); line-height: 1.8; margin-bottom: 1.5rem;">
+            Deep assessment of vector databases, chunking strategies, document ingestion pipelines, and document-level privilege escalation risks.
+          </p>
+          <ul style="list-style: none; font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+            <li><span style="color: var(--green); margin-right: 6px;">[✓]</span> Vector DB Privilege Escalation</li>
+            <li><span style="color: var(--green); margin-right: 6px;">[✓]</span> Document Payload Poisoning</li>
+            <li><span style="color: var(--green); margin-right: 6px;">[✓]</span> Context Window Overflow Vectors</li>
+          </ul>
+          <a href="contact.html" class="btn-primary" style="width: 100%;"><span>ENGAGE SERVICE</span></a>
         </div>
-        <h3 class="service-title">LLM Red Teaming & Vulnerability Auditing</h3>
-        <p class="service-desc">I probe your LLM applications and RAG pipelines for real-world attack vectors — prompt injection, jailbreaking, training data extraction, and system-instruction bypass — then deliver a full remediation report.</p>
-        <ul class="service-capabilities">
-          <li><span class="capability-dot" style="background:var(--secondary);"></span>Prompt injection & jailbreak penetration testing</li>
-          <li><span class="capability-dot" style="background:var(--secondary);"></span>RAG pipeline indirect injection audits</li>
-          <li><span class="capability-dot" style="background:var(--secondary);"></span>Guardrail validation & bypass detection</li>
-        </ul>
-        <div class="svc-bottom-fade"></div>
-        <div style="margin-top:auto; padding-top:1.5rem; border-top:1px solid rgba(0,229,255,0.12); font-family:'JetBrains Mono',monospace; font-size:9px; color:#00E5FF; letter-spacing:0.2em;">OWASP LLM01 · LLM07 · LLM09</div>
-      </div>
-      <div class="service-card svc-schematic-1 glass-panel animate-fade-up stagger-3">
-        <div class="svc-status">
-          <span>STAT: SCANNING</span>
-          <div class="status-dot-sm" style="animation-delay:1s;"></div>
+
+        <!-- Service 3 -->
+        <div class="glass-panel-elite hover-z-shift animate-fade-up stagger-3" style="padding: 2.5rem; border-top: 2px solid var(--green);">
+          <div style="font-family: var(--font-mono); font-size: 10px; color: var(--green); margin-bottom: 1rem; letter-spacing: 0.2em;">SERVICE // 03</div>
+          <h3 style="font-family: var(--font-headline); font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem;">AI Supply Chain & Model Defense</h3>
+          <p style="font-family: var(--font-body); font-size: 13px; color: var(--on-surface-dim); line-height: 1.8; margin-bottom: 1.5rem;">
+            Model weight serialization security analysis, dataset poisoning detection, and malicious dependency scanning across your ML pipeline.
+          </p>
+          <ul style="list-style: none; font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+            <li><span style="color: var(--green); margin-right: 6px;">[✓]</span> Pickle vs SafeTensors Inspection</li>
+            <li><span style="color: var(--green); margin-right: 6px;">[✓]</span> Training Set Backdoor Scanning</li>
+            <li><span style="color: var(--green); margin-right: 6px;">[✓]</span> Open-Source Model Integrity</li>
+          </ul>
+          <a href="contact.html" class="btn-primary" style="width: 100%;"><span>ENGAGE SERVICE</span></a>
         </div>
-        <div class="svc-icon">
-          <span class="material-symbols-outlined" style="color:var(--primary-fixed);font-variation-settings:'FILL' 0;">verified_user</span>
-        </div>
-        <h3 class="service-title">AI Supply Chain & Model Defense</h3>
-        <p class="service-desc">I secure your AI model pipeline from the ground up — verifying model weight serialization (SafeTensors vs Pickle), scanning training datasets for poisoning attacks, and protecting against backdoor insertion.</p>
-        <ul class="service-capabilities">
-          <li><span class="capability-dot" style="background:#fff;"></span>Model weight & serialization verification</li>
-          <li><span class="capability-dot" style="background:#fff;"></span>Dataset poisoning & backdoor detection</li>
-          <li><span class="capability-dot" style="background:#fff;"></span>Dependency & open-source model scanning</li>
-        </ul>
-        <div class="svc-bottom-fade"></div>
-        <div style="margin-top:auto; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.08); font-family:'JetBrains Mono',monospace; font-size:9px; color:rgba(255,255,255,0.5); letter-spacing:0.2em;">OWASP LLM03 · LLM04 · LLM05</div>
+
       </div>
     </div>
-
-    <!-- ── ENGAGEMENT PROCESS ── -->
-    <section style="margin-top:6rem;">
-      <div style="text-align:center; margin-bottom:4rem;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#00ff66; letter-spacing:0.35em; margin-bottom:14px;">// HOW AN ENGAGEMENT WORKS</div>
-        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(1.75rem,3.5vw,2.75rem); color:#fff; font-weight:700;">From First Contact to Secured System</h2>
-        <p style="color:#849495; font-size:15px; margin-top:10px;">A clear, structured process so you always know what to expect.</p>
-      </div>
-      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px; position:relative;">
-        <!-- connector line -->
-        <div style="position:absolute; top:40px; left:12.5%; right:12.5%; height:1px; background:linear-gradient(to right, rgba(0,255,102,0.4), rgba(0,229,255,0.4)); z-index:0;"></div>
-
-        <div style="text-align:center; position:relative; z-index:1;">
-          <div style="width:80px; height:80px; border-radius:50%; background:rgba(0,255,102,0.06); border:1px solid rgba(0,255,102,0.4); display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-family:'JetBrains Mono',monospace; font-size:1.4rem; font-weight:700; color:#00ff66;">01</div>
-          <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:#fff; margin-bottom:8px;">Discovery Call</h4>
-          <p style="font-size:13px; color:#849495; line-height:1.7;">We discuss your AI system, current concerns, and what an audit would cover. No commitment required.</p>
-        </div>
-        <div style="text-align:center; position:relative; z-index:1;">
-          <div style="width:80px; height:80px; border-radius:50%; background:rgba(0,255,102,0.06); border:1px solid rgba(0,255,102,0.4); display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-family:'JetBrains Mono',monospace; font-size:1.4rem; font-weight:700; color:#00ff66;">02</div>
-          <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:#fff; margin-bottom:8px;">Scoped Proposal</h4>
-          <p style="font-size:13px; color:#849495; line-height:1.7;">You receive a tailored audit scope document, timeline, and NDA within 48 hours of our call.</p>
-        </div>
-        <div style="text-align:center; position:relative; z-index:1;">
-          <div style="width:80px; height:80px; border-radius:50%; background:rgba(0,255,102,0.06); border:1px solid rgba(0,255,102,0.4); display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-family:'JetBrains Mono',monospace; font-size:1.4rem; font-weight:700; color:#00ff66;">03</div>
-          <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:#fff; margin-bottom:8px;">Active Audit</h4>
-          <p style="font-size:13px; color:#849495; line-height:1.7;">I execute the red team assessment against your agreed scope, documenting every finding with exploit PoC where relevant.</p>
-        </div>
-        <div style="text-align:center; position:relative; z-index:1;">
-          <div style="width:80px; height:80px; border-radius:50%; background:rgba(0,255,102,0.06); border:1px solid rgba(0,255,102,0.4); display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-family:'JetBrains Mono',monospace; font-size:1.4rem; font-weight:700; color:#00ff66;">04</div>
-          <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:#fff; margin-bottom:8px;">Report & Remediation</h4>
-          <p style="font-size:13px; color:#849495; line-height:1.7;">You receive a structured report: executive summary, full findings, severity ratings, and a step-by-step remediation roadmap.</p>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:3.5rem;">
-        <a href="contact.html" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#000; background:#00ff66; padding:14px 32px; text-decoration:none; letter-spacing:0.15em; text-transform:uppercase; transition:all 0.3s; font-weight:700;" onmouseover="this.style.boxShadow='0 0 30px rgba(0,255,102,0.5)'" onmouseout="this.style.boxShadow='none'">
-          🔒 Start Your Audit &nbsp;&rarr;
-        </a>
-      </div>
-    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" style="background:rgba(14,14,19,0.9);border-top:1px solid rgba(0,255,102,0.12);">
+  <footer class="site-footer glass-panel-elite">
     <div class="footer-inner">
       <a href="index.html" class="nav-logo">
-        <div class="nav-logo-dot" style="background:#00ff66;"></div>
+        <div class="nav-logo-dot"></div>
         <div class="nav-logo-text">MH.<span>SEC</span></div>
       </a>
-      <div style="font-family:var(--font-mono);font-size:12px;color:#849495;">© 2026 Muhammad Hasnain &mdash; AI Security Engineer</div>
+      <div class="footer-copy">© 2026 Muhammad Hasnain &mdash; AI Security Master &bull; LLM Red Teaming &bull; Supply Chain Defense</div>
       <div class="footer-links">
         <a href="projects.html">Case Studies</a>
-        <a href="https://github.com/HassnainKhan001" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/muhammad-hasnain-28840b382/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="services.html">Services</a>
+        <a href="diagnostic.html">AI Assistant</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
-  <style>
-    .btn-hire-sm {
-      display: inline-flex; align-items: center;
-      background: var(--primary-fixed);
-      color: #050508;
-      font-family: var(--font-mono); font-size: 11px;
-      font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;
-      padding: 0.5rem 1rem;
-      text-decoration: none; transition: all 0.3s;
-      box-shadow: 0 0 15px rgba(0,245,255,0.3);
-    }
-    .btn-hire-sm:hover { box-shadow: 0 0 25px rgba(0,245,255,0.6); transform: scale(1.02); }
-
-    .services-badge {
-      display: inline-flex; align-items: center; gap: 0.75rem;
-      padding: 0.25rem 0.75rem;
-      border: 1px solid rgba(58,73,74,0.5);
-      background: var(--surface-low);
-      font-family: var(--font-mono); font-size: 11px;
-      text-transform: uppercase; letter-spacing: 0.3em;
-      color: var(--primary-fixed);
-      border-radius: 999px;
-      margin-bottom: 1rem;
-    }
-    .services-headline {
-      font-family: var(--font-headline);
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700; text-transform: uppercase;
-      color: var(--on-surface);
-      margin-bottom: 1rem;
-    }
-    .services-accent-bar {
-      width: 6rem; height: 4px;
-      background: linear-gradient(to right, var(--primary-fixed), var(--secondary));
-      margin: 0 auto;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-card {
-      position: relative;
-      padding: 2rem;
-      border-radius: 0.5rem;
-      min-height: 400px;
-      display: flex; flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
-      transition: all 0.3s;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(0,245,255,0.04) 0%, rgba(104,0,236,0.04) 100%);
-      z-index: -1;
-    }
-    .service-card:hover {
-      box-shadow: 0 0 25px rgba(0,245,255,0.15);
-      border-color: rgba(0,245,255,0.35);
-      transform: translateY(-4px);
-    }
-
-    .svc-schematic-1 {
-      background-image: linear-gradient(rgba(0,245,255,0.03) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(0,245,255,0.03) 1px, transparent 1px);
-      background-size: 20px 20px;
-    }
-    .svc-dotsbg {
-      position: absolute; inset: 0;
-      background-image: radial-gradient(rgba(104,0,236,0.1) 1px, transparent 1px);
-      background-size: 15px 15px;
-      opacity: 0.3; z-index: -1;
-    }
-
-    .svc-status {
-      position: absolute; top: 1rem; right: 1rem;
-      display: flex; align-items: center; gap: 0.5rem;
-      opacity: 0.7;
-      font-family: var(--font-mono); font-size: 10px;
-      text-transform: uppercase; letter-spacing: 0.15em;
-      color: var(--on-surface-variant);
-    }
-    .svc-icon {
-      width: 48px; height: 48px;
-      display: flex; align-items: center; justify-content: center;
-      background: var(--surface-container);
-      border: 1px solid rgba(58,73,74,0.3);
-      border-radius: 4px;
-      margin-bottom: 1.5rem;
-      transition: border-color 0.3s;
-    }
-    .service-card:hover .svc-icon { border-color: rgba(0,245,255,0.4); }
-
-    .svc-title {
-      font-family: var(--font-headline); font-size: 1.375rem; font-weight: 600;
-      color: var(--on-surface); margin-bottom: 1rem;
-    }
-    .svc-desc {
-      font-family: var(--font-body); font-size: 14px;
-      color: var(--on-surface-variant); line-height: 1.7;
-    }
-    .svc-divider {
-      height: 1px;
-      background: linear-gradient(to right, rgba(58,73,74,0.5), transparent);
-      margin: 1rem 0;
-    }
-    .svc-list {
-      list-style: none;
-      display: flex; flex-direction: column; gap: 0.75rem;
-      font-family: var(--font-mono); font-size: 13px;
-      color: var(--on-surface);
-    }
-    .svc-list li { display: flex; align-items: center; gap: 0.75rem; }
-    .svc-bottom-fade {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(10,10,15,0.7), transparent);
-      pointer-events: none; opacity: 0.5;
-    }
-
-    /* CSS variable needed */
-    :root {
-      --secondary-container: #00b2cc;
-      --primary-fixed-dim: #00cc52;
-      --surface-container: #1f1f25;
-      --surface-low: #1b1b20;
-    }
-
-    @media (max-width: 768px) {
-      main { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
-    }
-  </style>
-
-  <script>
-    const animatedEls = document.querySelectorAll('.animate-fade-up');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    animatedEls.forEach(el => {
-      el.style.animationPlayState = 'paused';
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>
