@@ -70,80 +70,309 @@ BASE_DIR = Path(__file__).resolve().parent
 
 KB = {
     "name": "Muhammad Hasnain",
-    "title": "AI Automation Expert & Software Developer",
-    "role": "Official Assistant",
+    "title": "AI Security Master — LLM Red Teaming & Offensive AI Security",
+    "role": "AI Security Master & Offensive Security Specialist",
     "location": "Pakistan // Remote Worldwide",
     "email": "hassnainpasha001@gmail.com",
     "github": "https://github.com/HassnainKhan001",
     "linkedin": "https://www.linkedin.com/in/muhammad-hasnain-28840b382/",
-    "availability": "Currently open for new projects. I'll get back to you within 24 hours.",
-    "experience_summary": "He builds high-quality software and smart AI tools that help businesses grow and run more efficiently.",
-    
+    "availability": "Available for security audits and red teaming engagements. 48-hour response SLA.",
+    "experience_summary": (
+        "Muhammad Hasnain is an AI Security Master specializing in LLM Red Teaming, "
+        "prompt injection exploitation, RAG pipeline auditing, and AI supply chain defense. "
+        "With 5+ years of software engineering experience, he thinks like an attacker "
+        "and defends like an engineer."
+    ),
+
     "expertise": [
-        "Software Development",
-        "AI Automation",
-        "AI Chatbot Development",
-        "Full AI Integration",
-        "Intelligent Systems Architecture"
+        "LLM Red Teaming & Jailbreaking",
+        "Prompt Injection (Direct & Indirect)",
+        "RAG Pipeline Security Auditing",
+        "AI Supply Chain & Model Weight Defense",
+        "Adversarial ML & Safety Benchmarks",
+        "Secure AI Architecture Design",
+        "OWASP LLM Top 10 Compliance",
+        "MITRE ATLAS Threat Modeling"
     ],
 
     "skills": [
-        "JavaScript", "TypeScript", "Node.js", "React", "Next.js", "Python", 
-        "n8n", "Make.com", "OpenAI", "REST APIs", "AI SDKs & LLM APIs", 
-        "Databases", "Cloud Integrations"
+        "LLM Red Teaming", "Prompt Injection", "Jailbreak Testing",
+        "RAG Pipeline Auditing", "SafeTensors Verification", "PickleScan",
+        "Adversarial ML", "Model Poisoning Detection", "RBAC Enforcement",
+        "Python", "FastAPI", "PyRIT", "Garak", "Inspect AI",
+        "LangChain", "Vector DBs (Pinecone, Qdrant, Milvus)",
+        "OWASP LLM Top 10", "MITRE ATLAS", "NIST AI RMF", "ISO 42001"
     ],
 
     "projects": [
         {
-            "name": "Social Media Automation Bot",
-            "description": "Automates messaging, workflows, customer interactions, and platform-based automation systems.",
-            "stack": ["n8n", "Python", "API Integrations"]
+            "name": "Enterprise RAG Prompt Injection Audit",
+            "description": (
+                "Red teamed an enterprise RAG pipeline, uncovering indirect prompt injections "
+                "in PDF ingestors and implementing vector DB authorization layers that prevented "
+                "critical data exfiltration."
+            ),
+            "stack": ["RAG Security", "Prompt Injection", "Vector DB Auth"],
+            "owasp": "LLM01 · LLM06 · LLM08"
         },
         {
-            "name": "AI Portfolio Assistant",
-            "description": "An intelligent conversational assistant designed to represent portfolio projects, technical skills, and services naturally.",
-            "stack": ["FastAPI", "Python", "NLP"]
+            "name": "AI Supply Chain & Model Weight Scanner",
+            "description": (
+                "Static analysis tool for model weight deserialization vulnerabilities "
+                "(SafeTensors vs unsafe Pickle execution) and training dataset poisoning "
+                "vector detection."
+            ),
+            "stack": ["SafeTensors", "PickleScan", "Python", "Static Analysis"],
+            "owasp": "LLM03 · LLM04 · LLM05"
         },
         {
-            "name": "CRM Workflow Automation",
-            "description": "Automation system connecting APIs, customer workflows, CRMs, and business operations.",
-            "stack": ["Node.js", "CRM APIs", "Automations"]
+            "name": "Nexus SecFlow Agent Engine",
+            "description": (
+                "Hardened multi-agent workflow engine built with strict RBAC enforcement, "
+                "tool execution sandboxing, and runtime instruction isolation to prevent "
+                "agent hijacking."
+            ),
+            "stack": ["Agent Security", "RBAC", "Tool Sandboxing", "Python"],
+            "owasp": "LLM07 · LLM09"
         },
         {
-            "name": "AI Agent Systems",
-            "description": "Multi-step AI systems capable of reasoning, automation, decision support, and intelligent task execution.",
-            "stack": ["LangChain", "LLMs", "Agentic Frameworks"]
+            "name": "Aura Guard Chatbot Defense",
+            "description": (
+                "Conversational LLM application protected against system instruction extraction, "
+                "adversarial jailbreak attempts, and token-smuggling bypass vectors. "
+                "Blocked 99.7% of adversarial inputs."
+            ),
+            "stack": ["Jailbreak Defense", "Input Sanitization", "Guardrails", "LLM"],
+            "owasp": "LLM01 · LLM02"
         }
     ],
 
     "services": [
         {
-            "name": "Software Architecture",
-            "desc": "Designing robust, scalable, and secure backend systems and high-performance frontend interfaces.",
-            "capabilities": ["Software developed by AI coding", "Full AI integrated Software", "High Quality software designs"]
+            "name": "LLM Red Teaming & Jailbreak Auditing",
+            "desc": "Adversarial probing of LLM endpoints to identify prompt injections, goal hijacking, guardrail bypasses, and system instruction exfiltration.",
+            "capabilities": ["Direct & Indirect Prompt Injection", "System Instruction Extraction", "Guardrail & Safety Filter Testing"]
         },
         {
-            "name": "Business Automation",
-            "desc": "Replacing human latency with deterministic algorithmic workflows. Orchestrating complex API ecosystems.",
-            "capabilities": ["AI-Powered Social Media & Business Automation", "Chatbot Development for business", "AI Solutions for Modern Businesses"]
+            "name": "RAG Pipeline Vulnerability Audit",
+            "desc": "Deep assessment of vector databases, document ingestion pipelines, and document-level privilege escalation risks.",
+            "capabilities": ["Vector DB Privilege Escalation", "Document Payload Poisoning", "Context Window Overflow Vectors"]
         },
         {
-            "name": "Custom AI Assistants",
-            "desc": "Building smart conversational AI systems that turn business data into interactive experiences.",
-            "capabilities": ["Turning Ideas Into Intelligent AI Products", "Conversational AI Developer", "Custom AI Assistant Developer"]
+            "name": "AI Supply Chain & Model Defense",
+            "desc": "Model weight serialization security analysis, dataset poisoning detection, and malicious dependency scanning across your ML pipeline.",
+            "capabilities": ["Pickle vs SafeTensors Inspection", "Training Set Backdoor Scanning", "Open-Source Model Integrity Verification"]
         }
     ],
 
-    "philosophy": "Using smart AI and automation to solve business problems and improve efficiency.",
-    "current_mission": "Helping businesses leverage AI to automate workflows and scale faster.",
-    "work_ethic": "Atomic consistency over 1825+ days. Hard work is the baseline; excellence is the variable.",
-    "success_metrics": "$2M+ operational value generated. 50+ successful deployments. 99.9% system reliability.",
-    "pipeline": "AI Orchestration -> Process Optimization -> Intelligent Deployment.",
-    "projects_deployed": 54,
-    "automation_value": "$2.1M",
+    "philosophy": "Think like an attacker. Defend like an engineer. Secure AI before deployment, not after breach.",
+    "current_mission": "Helping enterprises find and fix AI vulnerabilities before adversaries exploit them.",
+    "work_ethic": "Every engagement is NDA-protected, structured, and delivered with a clear remediation roadmap.",
+    "success_metrics": "15+ LLM Audits Completed. 200+ Vulnerabilities Found. 99.7% Exploit Block Rate. 5+ Years Engineering Experience.",
+    "pipeline": "Recon & Surface Mapping -> Adversarial Exploitation -> Impact Assessment -> Hardening & Patching.",
+    "projects_deployed": 15,
+    "audits_completed": "15+",
+    "vulnerabilities_found": "200+",
+    "exploit_block_rate": "99.7%",
     "uptime": "99.98%",
     "experience_years": 5
 }
+
+# ─────────────────────────────────────────────
+# Agent Engine
+# ─────────────────────────────────────────────
+
+# In-memory session storage (Memory Module)
+SESSIONS = {}
+
+class AgentQuery(BaseModel):
+    query: str
+    session_id: str = "anonymous"
+
+
+def classify_intent(q: str) -> str:
+    """Professional Semantic Engine using word boundaries to ensure accurate intent mapping."""
+    q = q.lower()
+
+    intent_map = {
+        "greeting":     [r"hi", r"hello", r"hey", r"greetings", r"sup", r"howdy"],
+        "identity":     [r"who are you", r"your name", r"about you", r"identity", r"introduce", r"muhammad", r"hasnain", r"who is"],
+        "skills":       [r"skill", r"stack", r"tech", r"language", r"framework", r"tool", r"expertise", r"python", r"toolchain"],
+        "projects":     [r"project", r"work", r"portfolio", r"built", r"deployed", r"showcase", r"audit", r"case study"],
+        "pricing":      [r"price", r"cost", r"rate", r"budget", r"charge", r"fee", r"how much", r"quote"],
+        "availability": [r"available", r"free", r"contact", r"reach", r"email", r"hire", r"hire you", r"engage"],
+        "llm_red_team": [r"red team", r"red teaming", r"jailbreak", r"adversarial", r"llm", r"prompt injection", r"injection"],
+        "rag":          [r"rag", r"retrieval", r"vector", r"pipeline", r"document", r"ingestion", r"embedding"],
+        "supply_chain": [r"supply chain", r"model weight", r"safetensors", r"pickle", r"poisoning", r"backdoor", r"model integrity"],
+        "security":     [r"security", r"safe", r"protect", r"vulnerability", r"exploit", r"owasp", r"mitre", r"nist", r"guardrail"],
+        "architecture": [r"architect", r"system", r"rbac", r"sandbo", r"agent", r"secure design"],
+        "process":      [r"process", r"phases", r"steps", r"approach", r"methodology", r"how do you", r"how does"],
+        "status":       [r"status", r"online", r"system", r"health"],
+        "personality":  [r"personality", r"trait", r"character", r"philosophy", r"mindset"],
+        "success":      [r"success", r"achieve", r"milestone", r"result", r"impact", r"stats", r"numbers"],
+        "small_talk":   [r"how are you", r"doing well", r"cool", r"great", r"awesome", r"nice", r"good", r"thanks", r"thank you"],
+    }
+
+    scores = {intent: 0 for intent in intent_map.keys()}
+
+    for intent, keywords in intent_map.items():
+        for kw in keywords:
+            if re.search(rf"\b{re.escape(kw)}\b", q):
+                scores[intent] += 1
+                if " " in kw:
+                    scores[intent] += 2
+
+    best_intent = max(scores, key=scores.get)
+    if scores[best_intent] > 0:
+        return best_intent
+
+    return "fallback"
+
+
+def search_kb(query: str) -> str:
+    """Deep search fallback: scan the KB for any relevant keywords in the user's query."""
+    q = query.lower()
+    matches = []
+
+    searchable_text = {
+        "Expertise": ", ".join(KB.get("expertise", [])),
+        "Skills": ", ".join(KB.get("skills", [])),
+        "Projects": " ".join([p.get("name", "") + " " + p.get("description", "") for p in KB.get("projects", [])]),
+        "Philosophy": KB.get("philosophy", ""),
+        "Mission": KB.get("current_mission", ""),
+        "Success": KB.get("success_metrics", ""),
+    }
+
+    for category, text in searchable_text.items():
+        if not text: continue
+        words = [w for w in re.findall(r"\w+", q) if len(w) > 3]
+        if any(w in text.lower() for w in words):
+            matches.append(f"{category}: {text}")
+
+    if matches:
+        return "> DEEP_SEARCH_RESULTS_FOUND\n> " + "\n> ".join(matches[:3])
+
+    return ""
+
+
+def build_response(intent: str, query: str, session_id: str = "anonymous") -> dict:
+    """AI Security Master Portfolio Assistant response logic."""
+    session = SESSIONS.get(session_id, {})
+    user_name = session.get("user_name", "")
+
+    # Name capture
+    name_match = re.search(r"\b(my name is|i am|i'm|call me) ([\w\s]{2,20})\b", query.lower())
+    if name_match:
+        user_name = name_match.group(2).strip().title()
+        SESSIONS.setdefault(session_id, {})["user_name"] = user_name
+        return {
+            "intent": "name_intro",
+            "message": f"Noted, {user_name}. How can I assist you with Muhammad Hasnain's AI Security portfolio today?",
+            "data": {"user_name": user_name}
+        }
+
+    project_list = " | ".join([p["name"] for p in KB["projects"]])
+    service_list = " | ".join([s["name"] for s in KB["services"]])
+    skills_short = ", ".join(KB["skills"][:8])
+
+    responses = {
+        "greeting": (
+            "Hello. I am the AI Security Intelligence Agent for Muhammad Hasnain's portfolio. "
+            "I can brief you on his LLM Red Teaming capabilities, active case studies, audit services, and engagement process. "
+            "What would you like to know?"
+        ),
+        "identity": (
+            f"Muhammad Hasnain is an **AI Security Master** specializing in LLM Red Teaming, "
+            f"prompt injection exploitation, RAG pipeline auditing, and AI supply chain defense. "
+            f"With 5+ years of software engineering experience, he probes AI systems for critical vulnerabilities "
+            f"before adversaries can exploit them. He has completed 15+ LLM security audits and found 200+ vulnerabilities."
+        ),
+        "skills": (
+            f"His offensive and defensive AI security toolkit includes: {skills_short}. "
+            f"He is aligned with OWASP LLM Top 10, MITRE ATLAS, NIST AI RMF, and ISO 42001 security standards."
+        ),
+        "projects": (
+            f"His verified security case studies include: {project_list}. "
+            f"Each engagement is NDA-protected with a structured audit report and clear remediation roadmap."
+        ),
+        "llm_red_team": (
+            "Muhammad specializes in LLM Red Teaming — adversarially probing your LLM endpoints for prompt injections, "
+            "jailbreaks, system instruction extraction, and guardrail bypasses. "
+            "He uses tools including PyRIT, Garak, and Inspect AI, aligned with OWASP LLM01 and MITRE ATLAS."
+        ),
+        "rag": (
+            "He conducts deep RAG pipeline security audits: testing vector database access controls, "
+            "document-level privilege escalation, indirect prompt injection via ingested documents, "
+            "and context window overflow attacks. Covers Pinecone, Qdrant, Milvus, and LangChain-based pipelines."
+        ),
+        "supply_chain": (
+            "Muhammad audits AI model supply chains — verifying model weight serialization safety "
+            "(SafeTensors vs unsafe Pickle deserialization), scanning training datasets for backdoor injection, "
+            "and auditing open-source model integrity. Aligned with OWASP LLM03, LLM04, LLM05."
+        ),
+        "security": (
+            "His security work spans the full AI attack surface: LLM Red Teaming, RAG pipeline audits, "
+            "AI supply chain defense, adversarial ML, and secure AI architecture design. "
+            "Every audit is aligned to OWASP LLM Top 10, MITRE ATLAS, and NIST AI RMF."
+        ),
+        "services": (
+            f"He offers three core offensive AI security services: {service_list}. "
+            f"All engagements include an NDA, a full written audit report, and a prioritized remediation roadmap."
+        ),
+        "availability": (
+            f"Muhammad is currently available for new AI security engagements. "
+            f"Response guaranteed within 48 hours. Contact: {KB['email']} or via LinkedIn. "
+            f"All findings are NDA-protected."
+        ),
+        "pricing": (
+            "Engagement pricing depends on scope — LLM audit, RAG pipeline assessment, or full enterprise AI architecture review. "
+            "Contact Muhammad directly to discuss your requirements and receive a scoped proposal."
+        ),
+        "architecture": (
+            "He designs secure AI architectures with a zero-trust mindset: enforcing RBAC, sandboxing agent tool calls, "
+            "isolating runtime instructions, and threat-modeling every LLM wrapper and agent pipeline from the ground up."
+        ),
+        "process": (
+            "His audit lifecycle follows four phases: "
+            "1) Recon & Attack Surface Mapping → "
+            "2) Adversarial Exploitation (prompt injection, jailbreaks, exfiltration) → "
+            "3) Impact & Data Leakage Assessment → "
+            "4) Hardening, Guardrail Implementation & Remediation Report."
+        ),
+        "success": (
+            f"His track record: 15+ LLM Security Audits | 200+ Vulnerabilities Found | "
+            f"99.7% Exploit Block Rate achieved post-remediation | 5+ Years Engineering Experience. "
+            f"Every engagement is NDA-protected with a full structured report."
+        ),
+        "personality": (
+            "Muhammad operates with an offensive security mindset: he thinks like an attacker and defends like an engineer. "
+            "His developer background gives him an edge — he understands exactly how AI systems are built, "
+            "so he knows exactly where to break them."
+        ),
+        "status": "Systems online. AI Security Intelligence Engine active. Ready to brief you on Muhammad Hasnain's security capabilities.",
+        "small_talk": "Ready to assist. Ask me about Muhammad's LLM Red Teaming work, audit services, or how to initiate an engagement.",
+    }
+
+    if intent in responses:
+        return {"intent": intent, "message": responses[intent]}
+
+    # Fallback with Deep Search
+    kb_results = search_kb(query)
+    if kb_results:
+        return {
+            "intent": "deep_search",
+            "message": f"Relevant intelligence found: {kb_results}. Would you like more detail on this?",
+            "data": {},
+        }
+
+    return {
+        "intent": "fallback",
+        "message": (
+            "I can brief you on Muhammad Hasnain's AI Security capabilities: "
+            "LLM Red Teaming, Prompt Injection, RAG Pipeline Audits, AI Supply Chain Defense, or how to initiate an engagement."
+        ),
+        "data": {},
+    }
 
 # ─────────────────────────────────────────────
 # Agent Engine
