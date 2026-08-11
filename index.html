@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -101,7 +101,7 @@
         <div class="profile-frame-corner pf-bl"></div>
         <div class="profile-frame-corner pf-br"></div>
         <div class="profile-scanline"></div>
-        <img src="4a164a4d-1af0-4a13-b60f-a4ff842c9e6d.jpg" alt="Muhammad Hasnain — AI Security Master" class="profile-img" />
+        <img src="profile.jpg" alt="Muhammad Hasnain — AI Security Master" class="profile-img" />
         <div class="profile-overlay"></div>
       </div>
 
@@ -357,47 +357,88 @@
         <p class="section-desc">Mastery across the full attack & defense spectrum. Every tool battle-tested in real engagements.</p>
       </div>
       <div class="skills-grid">
+        <!-- Capability 1 -->
         <div class="skill-card animate-fade-up stagger-1">
-          <div class="skill-icon">🔴</div>
-          <h3>LLM Red Teaming</h3>
-          <div class="skill-tag">Offensive AI Security</div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:95%"></div></div>
-          <div class="skill-percent">95%</div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+            <span class="material-symbols-outlined" style="color: var(--green); font-size: 24px;">bug_report</span>
+            <span class="skill-tag">OFFENSIVE RESEARCH</span>
+          </div>
+          <h3>LLM Red Teaming & Jailbreaking</h3>
+          <p style="font-size: 12px; color: var(--on-surface-dim); line-height: 1.7; margin-top: 0.25rem;">Adversarial probing of inference endpoints, system prompt extraction, and automated jailbreak payload generation.</p>
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(0,255,65,0.1); font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 4px;">
+            <div><span style="color: var(--green);">TOOLCHAIN:</span> PyRIT · Garak · Inspect AI · Custom Fuzzers</div>
+            <div><span style="color: var(--green);">STANDARDS:</span> OWASP LLM01 · MITRE ATLAS</div>
+          </div>
         </div>
+
+        <!-- Capability 2 -->
         <div class="skill-card animate-fade-up stagger-2">
-          <div class="skill-icon">💉</div>
-          <h3>Prompt Injection</h3>
-          <div class="skill-tag">Attack Vectors</div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:97%"></div></div>
-          <div class="skill-percent">97%</div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+            <span class="material-symbols-outlined" style="color: var(--green); font-size: 24px;">terminal</span>
+            <span class="skill-tag">ATTACK SURFACE</span>
+          </div>
+          <h3>Prompt Injection Auditing</h3>
+          <p style="font-size: 12px; color: var(--on-surface-dim); line-height: 1.7; margin-top: 0.25rem;">Targeted audit of direct and indirect prompt injection vectors in multi-modal inputs and autonomous AI agents.</p>
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(0,255,65,0.1); font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 4px;">
+            <div><span style="color: var(--green);">VECTORS:</span> Indirect Injection · Token Smuggling</div>
+            <div><span style="color: var(--green);">STANDARDS:</span> OWASP LLM01 · OWASP LLM02</div>
+          </div>
         </div>
+
+        <!-- Capability 3 -->
         <div class="skill-card animate-fade-up stagger-3">
-          <div class="skill-icon">🛡️</div>
-          <h3>AI Supply Chain Defense</h3>
-          <div class="skill-tag">Model Security</div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:92%"></div></div>
-          <div class="skill-percent">92%</div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+            <span class="material-symbols-outlined" style="color: var(--green); font-size: 24px;">shield</span>
+            <span class="skill-tag">SUPPLY CHAIN</span>
+          </div>
+          <h3>AI Supply Chain & Weight Defense</h3>
+          <p style="font-size: 12px; color: var(--on-surface-dim); line-height: 1.7; margin-top: 0.25rem;">Model weight deserialization analysis, training set backdoor scanning, and dependency risk verification.</p>
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(0,255,65,0.1); font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 4px;">
+            <div><span style="color: var(--green);">TOOLCHAIN:</span> SafeTensors · PickleScan · Weight Audits</div>
+            <div><span style="color: var(--green);">STANDARDS:</span> OWASP LLM03 · OWASP LLM05</div>
+          </div>
         </div>
+
+        <!-- Capability 4 -->
         <div class="skill-card animate-fade-up stagger-1">
-          <div class="skill-icon">🔗</div>
-          <h3>RAG Pipeline Auditing</h3>
-          <div class="skill-tag">Retrieval Security</div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:90%"></div></div>
-          <div class="skill-percent">90%</div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+            <span class="material-symbols-outlined" style="color: var(--green); font-size: 24px;">database</span>
+            <span class="skill-tag">RETRIEVAL SECURITY</span>
+          </div>
+          <h3>RAG Pipeline Security</h3>
+          <p style="font-size: 12px; color: var(--on-surface-dim); line-height: 1.7; margin-top: 0.25rem;">Vector database access control testing, document authorization enforcement, and data exfiltration defense.</p>
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(0,255,65,0.1); font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 4px;">
+            <div><span style="color: var(--green);">TARGETS:</span> Pinecone · Qdrant · Milvus · LangChain</div>
+            <div><span style="color: var(--green);">STANDARDS:</span> OWASP LLM06 · OWASP LLM08</div>
+          </div>
         </div>
+
+        <!-- Capability 5 -->
         <div class="skill-card animate-fade-up stagger-2">
-          <div class="skill-icon">🐍</div>
-          <h3>Python / FastAPI</h3>
-          <div class="skill-tag">Backend Engineering</div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:88%"></div></div>
-          <div class="skill-percent">88%</div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+            <span class="material-symbols-outlined" style="color: var(--green); font-size: 24px;">code</span>
+            <span class="skill-tag">SECURE DEV</span>
+          </div>
+          <h3>Backend & Security Engineering</h3>
+          <p style="font-size: 12px; color: var(--on-surface-dim); line-height: 1.7; margin-top: 0.25rem;">Production-ready API security, Async Python (FastAPI/Pydantic), sandboxed tool callers, and rate-limiting.</p>
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(0,255,65,0.1); font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 4px;">
+            <div><span style="color: var(--green);">STACK:</span> Python · FastAPI · Docker · Pydantic</div>
+            <div><span style="color: var(--green);">STANDARDS:</span> Zero-Trust · NIST SP 800-207</div>
+          </div>
         </div>
+
+        <!-- Capability 6 -->
         <div class="skill-card animate-fade-up stagger-3">
-          <div class="skill-icon">🎭</div>
-          <h3>Adversarial ML</h3>
-          <div class="skill-tag">Model Attack Research</div>
-          <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:85%"></div></div>
-          <div class="skill-percent">85%</div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+            <span class="material-symbols-outlined" style="color: var(--green); font-size: 24px;">radar</span>
+            <span class="skill-tag">ADVANCED RESEARCH</span>
+          </div>
+          <h3>Adversarial ML & Safety Benchmarks</h3>
+          <p style="font-size: 12px; color: var(--on-surface-dim); line-height: 1.7; margin-top: 0.25rem;">Model inversion testing, membership inference research, and continuous safety benchmark evaluation.</p>
+          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(0,255,65,0.1); font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.7); display: flex; flex-direction: column; gap: 4px;">
+            <div><span style="color: var(--green);">FRAMEWORKS:</span> ART · PyTorch Security · Safety Evals</div>
+            <div><span style="color: var(--green);">STANDARDS:</span> NIST AI RMF · ISO 42001</div>
+          </div>
         </div>
       </div>
     </div>
