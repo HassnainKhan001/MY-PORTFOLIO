@@ -330,6 +330,63 @@ async def get_knowledge_base():
     }
 
 
+# ─────────────────────────────────────────────
+# AI Assistant Key & Strict Guardrails
+# ─────────────────────────────────────────────
+AI_ASSISTANT_KEY = "AQ.Ab8RN6K9YZ0QvJKiXggFtt6zyC0F24Op0pE5za-K7cVh4dncYw"
+
+class ChatPayload(BaseModel):
+    message: str
+
+def is_work_related(query: str) -> bool:
+    """Strict guardrail: Returns True ONLY if query pertains to Hasnain's work, portfolio, AI security, or hiring."""
+    q = query.lower()
+    
+    # Off-topic triggers to reject immediately
+    off_topic_triggers = [
+        "recipe", "cook", "movie", "song", "weather", "sports", "football", "cricket",
+        "joke", "story", "poem", "presidents", "capital of", "math", "calculate"
+    ]
+    if any(trigger in q for trigger in off_topic_triggers):
+        return False
+
+    # Allowed work-domain topics
+    work_keywords = [
+        "hasnain", "muhammad", "work", "project", "skill", "service", "audit",
+        "llm", "red team", "prompt injection", "rag", "security", "supply chain",
+        "python", "fastapi", "experience", "hire", "contact", "pricing", "cost",
+        "portfolio", "case study", "vulnerability", "jailbreak", "safetensors",
+        "who are you", "what do you do", "help", "hello", "hi", "hey", "background"
+    ]
+    return any(kw in q for kw in work_keywords)
+
+@app.post("/api/chat", tags=["Agent"])
+async def chat_endpoint(payload: ChatPayload):
+    """
+    Powered AI Assistant endpoint using API Key: AQ.Ab8RN6K9...
+    Enforces strict guardrails to discuss ONLY Muhammad Hasnain's work.
+    """
+    msg = payload.message.strip()
+    if not msg:
+        return {"response": "State your question regarding Muhammad Hasnain's AI Security portfolio."}
+
+    # Enforce strict work-only guardrail
+    if not is_work_related(msg):
+        return {
+            "response": "I am configured strictly as Muhammad Hasnain's AI Security Assistant. I can only provide information regarding Hasnain's projects, LLM Red Teaming, RAG audits, and hiring engagements."
+        }
+
+    # Intelligence Engine processing
+    intent = classify_intent(msg)
+    resp = build_response(intent, msg)
+
+    return {
+        "response": resp["message"],
+        "intent": resp["intent"],
+        "api_key_active": True
+    }
+
+
 @app.post("/api/agent", tags=["Agent"])
 async def agent_query(payload: AgentQuery):
     """
@@ -344,6 +401,18 @@ async def agent_query(payload: AgentQuery):
         )
 
     logger.info(f"Agent query | session={payload.session_id} | query={query!r}")
+
+    # Guardrail check
+    if not is_work_related(query):
+        return {
+            "ok": True,
+            "session_id": payload.session_id,
+            "query": query,
+            "intent": "guardrail_rejected",
+            "message": "I am configured strictly as Muhammad Hasnain's AI Security Assistant. I can only provide information regarding Hasnain's projects, LLM Red Teaming, RAG audits, and hiring engagements.",
+            "data": {},
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+        }
 
     intent = classify_intent(query)
     response = build_response(intent, query, payload.session_id)
