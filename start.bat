@@ -1,11 +1,11 @@
 @echo off
-title Hasnain.SYS — Portfolio Server
+title Muhammad Hasnain — Developer Portfolio
 color 0B
 
 echo.
 echo  ╔══════════════════════════════════════════════════════╗
-echo  ║        Hasnain.SYS — AI Automation Portfolio         ║
-echo  ║                 Smart System v3.0.0                  ║
+echo  ║       Muhammad Hasnain — Developer Portfolio         ║
+echo  ║                 Portfolio Engine v4.1.0               ║
 echo  ╚══════════════════════════════════════════════════════╝
 echo.
 
@@ -27,8 +27,9 @@ echo  [*] Available routes:
 echo       http://127.0.0.1:8000              - Homepage
 echo       http://127.0.0.1:8000/projects     - Projects
 echo       http://127.0.0.1:8000/services     - Services
-echo       http://127.0.0.1:8000/neural-net   - How it Works
+echo       http://127.0.0.1:8000/neural-net   - Architecture
 echo       http://127.0.0.1:8000/diagnostic   - AI Assistant
+echo       http://127.0.0.1:8000/contact      - Contact
 echo       http://127.0.0.1:8000/api/docs     - API Docs
 echo.
 echo  [*] Press CTRL+C to stop the server.

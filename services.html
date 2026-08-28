@@ -1,322 +1,179 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Offensive Security Services & AI Audits | Muhammad Hasnain</title>
-  <meta name="description" content="AI Security services including LLM Red Teaming, RAG pipeline penetration testing, AI supply chain defense, and security architecture audits by Muhammad Hasnain." />
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%2300FF41' stroke-width='1' stroke-dasharray='4,2' opacity='0.4'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%2300FF41' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%2300FF41'%3E%3Canimate attributeName='opacity' values='1;0.4;1' dur='2s' repeatCount='indefinite'/%3E%3C/circle%3E%3C/svg%3E" />
+  <title>Services & Capabilities | Muhammad Hasnain</title>
+  <meta name="description" content="Explore full-stack web development, backend engineering, AI integration, and workflow automation services offered by Muhammad Hasnain." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%2306b6d4'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 </head>
+<body>
 
-<body class="matrix-bg">
-
-  <canvas id="cyber-canvas"></canvas>
-  <div class="crt-overlay"></div>
-  <div class="scanline"></div>
-
-  <!-- Threat Ticker -->
-  <div class="threat-ticker-bar">
-    <div class="ticker-label">
-      <span class="status-dot"></span>
-      <span>LIVE THREAT FEED</span>
-    </div>
-    <div class="ticker-content-track">
-      <div class="ticker-item"><span>[ENGAGEMENT]</span> <strong>TIER 01</strong> 48-Hour Rapid LLM Jailbreak &amp; Prompt Pentest <strong class="text-green">AVAILABLE</strong></div>
-      <div class="ticker-item"><span>[ENGAGEMENT]</span> <strong>TIER 02</strong> Full RAG Pipeline &amp; Vector DB Penetration Audit <strong class="text-cyan">AVAILABLE</strong></div>
-      <div class="ticker-item"><span>[ENGAGEMENT]</span> <strong>TIER 03</strong> SafeTensors &amp; Weights Supply Chain Defense <strong class="text-green">AVAILABLE</strong></div>
-      <!-- Duplicate -->
-      <div class="ticker-item"><span>[ENGAGEMENT]</span> <strong>TIER 01</strong> 48-Hour Rapid LLM Jailbreak &amp; Prompt Pentest <strong class="text-green">AVAILABLE</strong></div>
-      <div class="ticker-item"><span>[ENGAGEMENT]</span> <strong>TIER 02</strong> Full RAG Pipeline &amp; Vector DB Penetration Audit <strong class="text-cyan">AVAILABLE</strong></div>
-    </div>
-  </div>
-
-  <!-- HUD Sidebar & Radar -->
-  <div class="hud-sidebar">
-    <span>SEC.SHIELD: ACTIVE</span>
-    <span>ENGAGEMENT.SLA: 48HRS</span>
-    <span>STATUS: READY</span>
-    <div class="hud-bars">
-      <div class="hud-bar" style="animation-delay:0s"></div>
-      <div class="hud-bar" style="animation-delay:0.3s"></div>
-      <div class="hud-bar" style="animation-delay:0.6s"></div>
-    </div>
-  </div>
-
-  <div class="hud-radar">
-    <div class="hud-radar-inner">
-      <div class="hud-radar-dot"></div>
-      <div class="hud-radar-spin"></div>
-    </div>
-  </div>
+  <div class="bg-mesh"></div>
+  <div class="bg-grid"></div>
 
   <!-- Top Navigation -->
   <nav class="top-nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <div class="nav-logo-dot"></div>
-        <div class="nav-logo-text">MH.<span>SEC</span></div>
+        <div class="nav-logo-badge">MH</div>
+        <div>Muhammad <span>Hasnain</span></div>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html"><span class="nav-num">01</span>Home</a></li>
-        <li><a href="projects.html"><span class="nav-num">02</span>Projects</a></li>
-        <li><a href="services.html" class="active"><span class="nav-num">03</span>Services</a></li>
-        <li><a href="neural-net.html"><span class="nav-num">04</span>How It Works</a></li>
-        <li><a href="diagnostic.html"><span class="nav-num">05</span>AI Assistant</a></li>
-        <li><a href="contact.html"><span class="nav-num">06</span>Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="neural-net.html">Architecture</a></li>
+        <li><a href="diagnostic.html">AI Assistant</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="nav-controls">
-        <button class="audio-toggle-btn" title="Toggle Futuristic Sound FX">
-          <span class="material-symbols-outlined" style="font-size:16px;">volume_off</span>
-          <span class="audio-status-text">SND: OFF</span>
-        </button>
-        <button class="nav-terminal-btn" title="Open Interactive Cyber CLI (HotKey: ~)">
-          <span class="material-symbols-outlined" style="font-size:16px;">terminal</span>
-          <span>CLI [~]</span>
-        </button>
-        <button class="mobile-menu-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
-      </div>
+      <a href="contact.html" class="nav-cta-btn">
+        <span>Get in Touch</span>
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+      </a>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Toggle Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">01 — Home</a>
-      <a href="projects.html">02 — Projects</a>
-      <a href="services.html" class="active">03 — Services</a>
-      <a href="neural-net.html">04 — How It Works</a>
-      <a href="diagnostic.html">05 — AI Assistant</a>
-      <a href="contact.html">06 — Contact</a>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="neural-net.html">Architecture</a>
+      <a href="diagnostic.html">AI Assistant</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- Main Services Content -->
-  <main style="padding-top: 9.5rem; padding-bottom: 7rem; position: relative; z-index: 10;">
+  <!-- ── MAIN CONTENT ── -->
+  <main style="padding-top: 8rem; padding-bottom: 6rem;">
     <div class="container">
       
       <!-- Header -->
-      <header class="animate-fade-up" style="margin-bottom: 4rem;">
-        <div class="section-label">// AI Attack &amp; Defense Engagements</div>
-        <h1 class="section-title text-glow">
-          OFFENSIVE <span class="text-white">SECURITY SERVICES</span>
-        </h1>
-        <p class="font-mono text-dim" style="font-size: 13px; margin-top: 1rem; max-width: 680px; line-height: 1.8;">
-          Structured security audits, red teaming exercises, and production-ready defense code engineered for high-stakes AI applications and enterprise architectures.
+      <header style="margin-bottom: 3.5rem;">
+        <span class="section-tag">Capabilities & Services</span>
+        <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin: 0.5rem 0 1rem;">Solutions <span class="gradient-text">Engineered for Impact</span></h1>
+        <p style="color: var(--on-surface-muted); max-width: 650px; font-size: 1.05rem;">
+          Specialized technical services designed to help companies, founders, and teams build scalable, high-quality digital products.
         </p>
       </header>
 
-      <!-- ── 4 SERVICE TIERS ── -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 2rem; margin-bottom: 5rem;">
+      <!-- ── SERVICES GRID ── -->
+      <div class="cards-grid">
 
-        <!-- Tier 1 -->
-        <div class="glass-panel-elite hover-z-shift animate-fade-up stagger-1" style="padding: 2.5rem; border-top: 3px solid var(--green); display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-              <span class="font-mono text-green" style="font-size: 10px; letter-spacing: 0.2em;">TIER // 01</span>
-              <span class="font-mono text-dim" style="font-size:10px;">3-5 DAYS SLA</span>
-            </div>
-            <h3 class="font-headline" style="font-size: 1.35rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem;">Rapid LLM Red Team &amp; Pentest</h3>
-            <p style="font-size: 13px; color: var(--on-surface-dim); line-height: 1.8; margin-bottom: 1.5rem;">
-              Targeted offensive probe of inference endpoints, system prompt boundaries, direct/indirect injection vectors, and guardrail bypass testing.
-            </p>
-            <ul class="font-mono text-dim" style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:11px; margin-bottom:1.75rem;">
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot"></span> System prompt extraction audit</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot"></span> Multi-modal jailbreak evaluation</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot"></span> Executive summary &amp; OWASP score</li>
-            </ul>
+        <!-- Service 1 -->
+        <div class="glass-card">
+          <div class="card-icon">
+            <span class="material-symbols-outlined">devices</span>
           </div>
-          <a href="contact.html" class="btn-secondary" style="width:100%; text-align:center;">Scope Rapid Pentest</a>
+          <h3 class="card-title">Full-Stack Web Development</h3>
+          <p class="card-desc">
+            End-to-end responsive web applications crafted with clean code, fast loading speeds, seamless user flows, and modern design aesthetics.
+          </p>
+          <div class="card-footer">
+            <span class="text-subtle">HTML5 · CSS3 · JavaScript · Python</span>
+            <a href="contact.html" class="card-link">Inquire <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span></a>
+          </div>
         </div>
 
-        <!-- Tier 2 -->
-        <div class="glass-panel-elite hover-z-shift animate-fade-up stagger-2" style="padding: 2.5rem; border-top: 3px solid var(--cyan); display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-              <span class="font-mono text-cyan" style="font-size: 10px; letter-spacing: 0.2em;">TIER // 02 [MOST POPULAR]</span>
-              <span class="font-mono text-dim" style="font-size:10px;">7-10 DAYS SLA</span>
-            </div>
-            <h3 class="font-headline" style="font-size: 1.35rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem;">Full RAG Pipeline Security Audit</h3>
-            <p style="font-size: 13px; color: var(--on-surface-dim); line-height: 1.8; margin-bottom: 1.5rem;">
-              Comprehensive end-to-end security penetration of document ingestion pipelines, vector databases (Pinecone, Qdrant), access controls, and output renderers.
-            </p>
-            <ul class="font-mono text-dim" style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:11px; margin-bottom:1.75rem;">
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot" style="background:var(--cyan); box-shadow:0 0 8px var(--cyan);"></span> PDF / Doc parser injection probing</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot" style="background:var(--cyan); box-shadow:0 0 8px var(--cyan);"></span> Vector embedding ACL isolation</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot" style="background:var(--cyan); box-shadow:0 0 8px var(--cyan);"></span> Drop-in Python guardrail code patch</li>
-            </ul>
+        <!-- Service 2 -->
+        <div class="glass-card">
+          <div class="card-icon" style="background: var(--accent-dim); color: var(--accent-light);">
+            <span class="material-symbols-outlined">dns</span>
           </div>
-          <a href="contact.html" class="btn-primary" style="width:100%; text-align:center;">Scope RAG Audit</a>
+          <h3 class="card-title">Backend & API Engineering</h3>
+          <p class="card-desc">
+            Robust, high-throughput REST APIs and microservice architectures built using Python FastAPI, Pydantic validation, and asynchronous processing.
+          </p>
+          <div class="card-footer">
+            <span class="text-subtle">FastAPI · REST · AsyncIO · SQL</span>
+            <a href="contact.html" class="card-link">Inquire <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span></a>
+          </div>
         </div>
 
-        <!-- Tier 3 -->
-        <div class="glass-panel-elite hover-z-shift animate-fade-up stagger-3" style="padding: 2.5rem; border-top: 3px solid var(--green); display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-              <span class="font-mono text-green" style="font-size: 10px; letter-spacing: 0.2em;">TIER // 03</span>
-              <span class="font-mono text-dim" style="font-size:10px;">5-7 DAYS SLA</span>
-            </div>
-            <h3 class="font-headline" style="font-size: 1.35rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem;">AI Supply Chain &amp; Model Defense</h3>
-            <p style="font-size: 13px; color: var(--on-surface-dim); line-height: 1.8; margin-bottom: 1.5rem;">
-              Pre-deployment inspection of open-source model checkpoints, training data poisoning scans, SafeTensors conversions, and PyPI dependency auditing.
-            </p>
-            <ul class="font-mono text-dim" style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:11px; margin-bottom:1.75rem;">
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot"></span> Pickle &amp; PyTorch opcode scan</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot"></span> Dataset backdoor anomaly tests</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot"></span> CI/CD model verification pipeline</li>
-            </ul>
+        <!-- Service 3 -->
+        <div class="glass-card">
+          <div class="card-icon">
+            <span class="material-symbols-outlined">smart_toy</span>
           </div>
-          <a href="contact.html" class="btn-secondary" style="width:100%; text-align:center;">Scope Supply Chain</a>
+          <h3 class="card-title">AI & Assistant Integration</h3>
+          <p class="card-desc">
+            Custom LLM integrations, conversational knowledge assistants, automated customer support agents, and AI workflow components.
+          </p>
+          <div class="card-footer">
+            <span class="text-subtle">LLMs · Agents · NLP · OpenAI</span>
+            <a href="contact.html" class="card-link">Inquire <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span></a>
+          </div>
         </div>
 
-        <!-- Tier 4 -->
-        <div class="glass-panel-elite hover-z-shift animate-fade-up stagger-4" style="padding: 2.5rem; border-top: 3px solid var(--cyan); display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-              <span class="font-mono text-cyan" style="font-size: 10px; letter-spacing: 0.2em;">TIER // 04</span>
-              <span class="font-mono text-dim" style="font-size:10px;">MONTHLY RETAINER</span>
-            </div>
-            <h3 class="font-headline" style="font-size: 1.35rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem;">Continuous AI Red Team Retainer</h3>
-            <p style="font-size: 13px; color: var(--on-surface-dim); line-height: 1.8; margin-bottom: 1.5rem;">
-              Dedicated ongoing offensive auditing, recurring prompt regression tests, priority pre-release audits, and incident advisory for high-growth AI companies.
-            </p>
-            <ul class="font-mono text-dim" style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:11px; margin-bottom:1.75rem;">
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot" style="background:var(--cyan); box-shadow:0 0 8px var(--cyan);"></span> Continuous automated fuzzing</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot" style="background:var(--cyan); box-shadow:0 0 8px var(--cyan);"></span> Dedicated Slack/Discord channel</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span class="status-dot" style="background:var(--cyan); box-shadow:0 0 8px var(--cyan);"></span> 24hr Critical Escalation SLA</li>
-            </ul>
+        <!-- Service 4 -->
+        <div class="glass-card">
+          <div class="card-icon" style="background: var(--accent-dim); color: var(--accent-light);">
+            <span class="material-symbols-outlined">hub</span>
           </div>
-          <a href="contact.html" class="btn-primary" style="width:100%; text-align:center;">Retain AI Red Team</a>
+          <h3 class="card-title">Workflow Automation & Pipelines</h3>
+          <p class="card-desc">
+            Automating repetitive manual tasks, synchronizing third-party APIs and webhooks, and orchestrating multi-step background data pipelines.
+          </p>
+          <div class="card-footer">
+            <span class="text-subtle">Webhooks · Automation · Cron</span>
+            <a href="contact.html" class="card-link">Inquire <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="glass-card">
+          <div class="card-icon">
+            <span class="material-symbols-outlined">speed</span>
+          </div>
+          <h3 class="card-title">Performance & Architecture Refactor</h3>
+          <p class="card-desc">
+            Auditing existing codebases for latency bottlenecks, structuring modular architectures, and optimizing load times for peak user experience.
+          </p>
+          <div class="card-footer">
+            <span class="text-subtle">Optimization · Architecture · Clean Code</span>
+            <a href="contact.html" class="card-link">Inquire <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="glass-card">
+          <div class="card-icon" style="background: var(--accent-dim); color: var(--accent-light);">
+            <span class="material-symbols-outlined">support_agent</span>
+          </div>
+          <h3 class="card-title">Technical Consulting & Prototyping</h3>
+          <p class="card-desc">
+            Rapid Minimum Viable Product (MVP) prototyping, technical discovery, system design planning, and advisory for early-stage software concepts.
+          </p>
+          <div class="card-footer">
+            <span class="text-subtle">Discovery · MVP · Prototyping</span>
+            <a href="contact.html" class="card-link">Inquire <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span></a>
+          </div>
         </div>
 
       </div>
 
-      <!-- ── 2. INTERACTIVE SECURITY AUDIT SCOPE CALCULATOR ── -->
-      <section id="audit-scope-calculator" style="margin-bottom: 6rem;">
-        <div class="section-label">// Interactive Scope Builder</div>
-        <h2 class="section-title">Calculate Your <span class="text-green text-glow">Audit Scope</span></h2>
-        <p class="font-mono text-dim" style="font-size: 13px; margin-top: 0.75rem; margin-bottom: 2rem;">
-          Select your target surfaces and timeline to receive an instantaneous technical scope estimate and transfer directly to the audit request form.
-        </p>
-
-        <div class="calc-container">
-          <form id="scope-calc-form">
-            <div class="calc-grid">
-              
-              <!-- Left: Options -->
-              <div>
-                <label class="font-mono text-green" style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; display:block; margin-bottom:0.75rem;">1. SELECT TARGET ATTACK SURFACES:</label>
-                <div class="calc-checkbox-grid">
-                  <label class="calc-check-label">
-                    <input type="checkbox" name="scope_targets" value="LLM Inference APIs" checked />
-                    <span>LLM Inference APIs</span>
-                  </label>
-                  <label class="calc-check-label">
-                    <input type="checkbox" name="scope_targets" value="RAG Pipeline & Vector DB" checked />
-                    <span>RAG &amp; Vector DB</span>
-                  </label>
-                  <label class="calc-check-label">
-                    <input type="checkbox" name="scope_targets" value="Autonomous Agent Tool-Callers" />
-                    <span>Autonomous Agents</span>
-                  </label>
-                  <label class="calc-check-label">
-                    <input type="checkbox" name="scope_targets" value="Model Weights & SafeTensors" />
-                    <span>Model Weights &amp; Files</span>
-                  </label>
-                  <label class="calc-check-label">
-                    <input type="checkbox" name="scope_targets" value="Backend API & Gateways" />
-                    <span>Backend Gateways</span>
-                  </label>
-                </div>
-
-                <div style="margin-top: 1.75rem;">
-                  <label class="font-mono text-green" style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; display:block; margin-bottom:0.75rem;">2. ENGAGEMENT DEPTH:</label>
-                  <div style="display:flex; gap:1.5rem; flex-wrap:wrap;">
-                    <label class="calc-check-label" style="flex:1;">
-                      <input type="radio" name="scope_depth" value="rapid" />
-                      <span>Rapid Scan</span>
-                    </label>
-                    <label class="calc-check-label" style="flex:1;">
-                      <input type="radio" name="scope_depth" value="comprehensive" checked />
-                      <span>Comprehensive</span>
-                    </label>
-                    <label class="calc-check-label" style="flex:1;">
-                      <input type="radio" name="scope_depth" value="deep" />
-                      <span>Deep Red-Team</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div style="margin-top: 1.75rem;">
-                  <label class="font-mono text-green" style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; display:block; margin-bottom:0.75rem;">3. TIMELINE SLA:</label>
-                  <select name="scope_timeline" style="width:100%; background:rgba(0,0,0,0.6); border:1px solid rgba(0,255,65,0.25); color:#fff; padding:0.8rem 1rem; font-family:var(--font-mono); font-size:12px; outline:none; border-radius:4px;">
-                    <option value="standard">Standard (1-2 Weeks Execution)</option>
-                    <option value="urgent">Express Priority (48-72 Hour Delivery)</option>
-                    <option value="extended">Extended Continuous Retainer</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Right: Result Card -->
-              <div class="calc-summary-card">
-                <div>
-                  <div class="font-mono text-green" style="font-size:10px; letter-spacing:0.2em; margin-bottom:1rem;">ESTIMATED AUDIT SCOPE SUMMARY</div>
-                  <div class="calc-stat-block">
-                    <div class="calc-stat-big" id="calc-hours-val">32 hrs</div>
-                    <div class="font-mono text-dim" style="font-size:11px;">Estimated Deep Red Teaming Effort</div>
-                  </div>
-                  <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08); font-family:var(--font-mono); font-size:12px; display:flex; flex-direction:column; gap:8px;">
-                    <div><span class="text-green">SURFACES:</span> <span id="calc-targets-count" class="text-white">2 selected</span></div>
-                    <div><span class="text-green">DELIVERY:</span> <span id="calc-turnaround-val" class="text-white">3-5 Business Days</span></div>
-                    <div><span class="text-green">DELIVERABLES:</span> <span class="text-white">OWASP Report + Remediation Code</span></div>
-                  </div>
-                </div>
-                <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem;">
-                  <button type="button" id="apply-scope-btn" class="btn-primary" style="width:100%;">Transfer Scope to Form →</button>
-                  <button type="button" id="copy-scope-btn" class="btn-secondary" style="width:100%;">Copy Scope Summary</button>
-                </div>
-              </div>
-
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <!-- ── 3. FREQUENTLY ASKED QUESTIONS ── -->
-      <section style="margin-bottom: 4rem;">
-        <div class="section-label">// Engagement Inquiries</div>
-        <h2 class="section-title">Frequently Asked <span class="text-green text-glow">Questions</span></h2>
-
-        <div class="faq-list">
-          <div class="faq-item active">
-            <div class="faq-item-header">
-              <span>How do you protect client data and confidentiality during audits?</span>
-              <span class="material-symbols-outlined text-green">expand_more</span>
-            </div>
-            <div class="faq-item-body">
-              Every engagement starts with a signed mutual Non-Disclosure Agreement (NDA). All offensive tests are executed in isolated testing environments or staging replicas, with zero storage of proprietary prompts or private vector datasets.
-            </div>
+      <!-- Engagement Workflow -->
+      <section style="margin-top: 6rem; padding: 3rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius-lg);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 2rem; text-align: center;">How We Work Together</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+          <div>
+            <div style="font-family: var(--font-headline); font-size: 1.5rem; font-weight: 800; color: var(--primary-light); margin-bottom: 0.5rem;">01. Discovery</div>
+            <p style="font-size: 0.9rem; color: var(--on-surface-muted);">Understanding your core objectives, project scope, technical requirements, and target timeline.</p>
           </div>
-
-          <div class="faq-item">
-            <div class="faq-item-header">
-              <span>What deliverables are included with an AI security audit?</span>
-              <span class="material-symbols-outlined text-green">expand_more</span>
-            </div>
-            <div class="faq-item-body">
-              You receive an Executive Threat Summary, a technical vulnerability matrix mapped to OWASP LLM Top 10 and MITRE ATLAS, reproducible exploitation scripts (PoCs), and production-ready Python / LangChain / FastAPI remediation patches.
-            </div>
+          <div>
+            <div style="font-family: var(--font-headline); font-size: 1.5rem; font-weight: 800; color: var(--primary-light); margin-bottom: 0.5rem;">02. Architecture</div>
+            <p style="font-size: 0.9rem; color: var(--on-surface-muted);">Designing clean data flows, component structures, API contracts, and user interface wireframes.</p>
           </div>
-
-          <div class="faq-item">
-            <div class="faq-item-header">
-              <span>How quickly can you start an emergency or pre-launch audit?</span>
-              <span class="material-symbols-outlined text-green">expand_more</span>
-            </div>
-            <div class="faq-item-body">
-              With our 48-Hour Rapid SLA, testing can commence immediately upon scope agreement and API credential provisioning. Express priority reports are delivered within 48 to 72 hours.
-            </div>
+          <div>
+            <div style="font-family: var(--font-headline); font-size: 1.5rem; font-weight: 800; color: var(--primary-light); margin-bottom: 0.5rem;">03. Development</div>
+            <p style="font-size: 0.9rem; color: var(--primary-light); margin-bottom: 0.5rem;">Iterative building with clean code, modern best practices, continuous testing, and milestone updates.</p>
+          </div>
+          <div>
+            <div style="font-family: var(--font-headline); font-size: 1.5rem; font-weight: 800; color: var(--primary-light); margin-bottom: 0.5rem;">04. Delivery</div>
+            <p style="font-size: 0.9rem; color: var(--on-surface-muted);">Production deployment, testing, documentation handover, and post-launch support.</p>
           </div>
         </div>
       </section>
@@ -324,29 +181,46 @@
     </div>
   </main>
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div style="display:flex; align-items:center; gap:1rem;">
-        <div class="nav-logo-dot"></div>
-        <div class="font-mono" style="font-size:13px; font-weight:700; color:#fff; letter-spacing:0.2em;">
-          MH.<span>SEC</span> // AI SECURITY MASTER
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom: 0.5rem;">
+            <div class="nav-logo-badge">MH</div>
+            <div>Muhammad <span>Hasnain</span></div>
+          </div>
+          <p>Building high-performance modern web solutions, intelligent tools, and robust backend architectures.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="neural-net.html">Architecture</a></li>
+            <li><a href="diagnostic.html">AI Assistant</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/HassnainKhan001" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-hasnain-28840b382/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+            <li><a href="mailto:hassnainpasha001@gmail.com">Email Directly</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="services.html">Services</a>
-        <a href="neural-net.html">How It Works</a>
-        <a href="diagnostic.html">AI Assistant</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-copy">
-        &copy; 2026 MUHAMMAD HASNAIN · ALL RIGHTS RESERVED
+
+      <div class="footer-bottom">
+        <div>© 2026 Muhammad Hasnain. All rights reserved.</div>
+        <div>Clean Slate Portfolio Engine</div>
       </div>
     </div>
   </footer>
 
-  <script src="portfolio.js"></script>
 </body>
 </html>
