@@ -1,13 +1,13 @@
-# Muhammad Hasnain — Software Engineer & Developer Portfolio
+# MH.SYS — AI ORCHESTRATOR Portfolio
 
-> **Muhammad Hasnain** — Full-Stack Developer & Software Engineer Portfolio  
+> **Muhammad Hasnain** — Neural Hub OS v2.4.0 — FastAPI + Static HTML Portfolio  
 > 🔗 [GitHub](https://github.com/HassnainKhan001) · [LinkedIn](https://www.linkedin.com/in/muhammad-hasnain-28840b382/)
 
 ---
 
 ## 🚀 Quick Start
 
-### Option 1 — Double-click launcher
+### Option 1 — Double-click launcher (Recommended)
 ```
 Double-click:  start.bat
 ```
@@ -31,19 +31,19 @@ Then open → **http://localhost:8080**
 ## 📁 Project Structure
 
 ```
-portfolio/
+Portfolio.Developer/
 │
-├── main.py              ← FastAPI backend + AI Assistant logic
+├── main.py              ← FastAPI app + AI Agent logic
 ├── requirements.txt     ← Python dependencies
 ├── start.bat            ← One-click launcher
 │
-├── index.html           ← Homepage / Hero & Highlights
-├── projects.html        ← Project Showcase & Case Studies
-├── services.html        ← Capabilities & Services
-├── neural-net.html      ← System Architecture & Lifecycle
-├── diagnostic.html      ← Interactive AI Portfolio Assistant
-├── contact.html         ← Contact & Collaboration Form
-└── index.css            ← Sleek dark modern design system
+├── index.html           ← Homepage / Hero
+├── projects.html        ← Deployed Infrastructure
+├── services.html        ← Core Capabilities
+├── diagnostic.html      ← AI Chat Interface  ← calls /api/agent
+├── neural-net.html      ← Technical Architecture
+├── contact.html         ← Neural Uplink       ← calls /api/contact
+└── index.css            ← Shared design system
 ```
 
 ---
@@ -54,15 +54,45 @@ portfolio/
 |--------|-------|-------------|
 | `GET`  | `/` | Homepage |
 | `GET`  | `/api/health` | System health check |
-| `GET`  | `/api/kb` | Knowledge base (JSON) |
-| `POST` | `/api/chat` | AI portfolio assistant |
+| `GET`  | `/api/kb` | Full knowledge base (JSON) |
+| `POST` | `/api/agent` | AI agent — natural language query |
 | `POST` | `/api/contact` | Contact form submission |
 | `GET`  | `/api/docs` | Swagger UI |
 
+### Agent Query Example
+```bash
+curl -X POST http://localhost:8080/api/agent \
+  -H "Content-Type: application/json" \
+  -d '{"query": "What are your skills?", "session_id": "test"}'
+```
+
+### Supported Query Intents
+| Query Keywords | Intent |
+|----------------|--------|
+| `hi`, `hello` | Greeting |
+| `skills`, `stack`, `tech` | Skills matrix |
+| `projects`, `deployed` | Project manifest |
+| `price`, `cost`, `budget` | Pricing tiers |
+| `available`, `hire` | Availability |
+| `automation`, `n8n` | Automation systems |
+| `ai`, `chatbot`, `rag` | AI systems |
+| `architecture`, `microservice` | Software architecture |
+| `process`, `pipeline` | Engineering pipeline |
+| `status`, `uptime` | System status |
+
 ---
 
-## 🛠 Tech Stack
+## 🛠 Requirements
 
-- **Backend**: Python 3.9+, FastAPI, Uvicorn, Pydantic
-- **Frontend**: HTML5, Modern CSS (Glassmorphism + Dark Slate), Vanilla JavaScript
-- **Styling**: Google Fonts (Plus Jakarta Sans, Inter, JetBrains Mono), Material Symbols
+- Python 3.9+
+- pip
+
+Dependencies installed automatically by `start.bat`:
+```
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+```
+"# MY-PORTFOLIO" 
+"# MY-PORTFOLIO" 
